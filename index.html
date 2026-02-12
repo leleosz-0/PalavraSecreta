@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+
+<header>
+    <h1>🎯 Jogo da Forca</h1>
+</header>
+
+<main>
+
+    <!-- Configurações -->
+    <section aria-labelledby="titulo-config">
+        <h2 id="titulo-config">Configurações</h2>
+
+        <label for="tema">Tema:</label>
+        <select id="tema" name="tema">
+            <option value="animais">Animais</option>
+            <option value="frutas">Frutas</option>
+            <option value="paises">Países</option>
+            <option value="aleatorio">Sortear Tema</option>
+        </select>
+
+        <label for="dificuldade">Dificuldade:</label>
+        <select id="dificuldade" name="dificuldade">
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+
+        <button type="button" id="btnIniciar">Iniciar Jogo</button>
+    </section>
+
+    <hr>
+
+    <!-- Forca -->
+    <section aria-labelledby="titulo-forca">
+        <h2 id="titulo-forca">Forca</h2>
+
+        <figure>
+            <pre aria-label="Desenho da forca representando os erros do jogador">
++---+
+|   |
+|    
+|    
+|    
+|    
+=========
+            </pre>
+            <figcaption>Estado atual da forca</figcaption>
+        </figure>
+    </section>
+
+    <!-- Palavra Oculta -->
+    <section aria-labelledby="titulo-palavra">
+        <h2 id="titulo-palavra">Palavra</h2>
+        <p id="palavra" aria-live="polite">
+            _ _ _ _ _
+        </p>
+    </section>
+
+    <!-- Teclado -->
+    <section aria-labelledby="titulo-teclado">
+        <h2 id="titulo-teclado">Teclado</h2>
+
+        <ul id="teclado">
+            <li><button type="button">A</button></li>
+            <li><button type="button">B</button></li>
+            <li><button type="button">C</button></li>
+            <li><button type="button">D</button></li>
+            <li><button type="button">E</button></li>
+            <li><button type="button">F</button></li>
+            <li><button type="button">G</button></li>
+            <li><button type="button">H</button></li>
+            <li><button type="button">I</button></li>
+            <li><button type="button">J</button></li>
+            <li><button type="button">K</button></li>
+            <li><button type="button">L</button></li>
+            <li><button type="button">M</button></li>
+            <li><button type="button">N</button></li>
+            <li><button type="button">O</button></li>
+            <li><button type="button">P</button></li>
+            <li><button type="button">Q</button></li>
+            <li><button type="button">R</button></li>
+            <li><button type="button">S</button></li>
+            <li><button type="button">T</button></li>
+            <li><button type="button">U</button></li>
+            <li><button type="button">V</button></li>
+            <li><button type="button">W</button></li>
+            <li><button type="button">X</button></li>
+            <li><button type="button">Y</button></li>
+            <li><button type="button">Z</button></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Status -->
+    <section aria-labelledby="titulo-status">
+        <h2 id="titulo-status">Status</h2>
+        <p id="mensagem" aria-live="polite">
+            Aguardando início...
+        </p>
+
+        <button type="button" id="btnReiniciar">Reiniciar</button>
+        <button type="button" id="btnCompartilhar">Compartilhar Resultado</button>
+    </section>
+
+</main>
+
+<!-- Conteúdo Secundário -->
+<aside aria-labelledby="titulo-cadastro">
+
+    <h2 id="titulo-cadastro">Cadastrar Nova Palavra</h2>
+
+    <form id="formCadastro">
+
+        <label for="novaPalavra">Palavra:</label>
+        <input type="text" id="novaPalavra" name="novaPalavra" required>
+
+        <label for="novoTema">Tema:</label>
+        <input type="text" id="novoTema" name="novoTema" required>
+
+        <label for="novaDificuldade">Dificuldade:</label>
+        <select id="novaDificuldade" name="novaDificuldade">
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+</aside>
+
+<footer>
+    <p>Projeto Educacional - Jogo da Forca</p>
+</footer>
+
+</body>
+</html>
