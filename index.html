@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>🎯 Jogo da Forca</h1>
+    <h1>Jogo da Forca</h1>
 </header>
 
 <main>
@@ -35,22 +36,20 @@
         <button type="button" id="btnIniciar">Iniciar Jogo</button>
     </section>
 
-    <hr>
-
     <!-- Forca -->
     <section aria-labelledby="titulo-forca">
         <h2 id="titulo-forca">Forca</h2>
 
         <figure>
-            <pre aria-label="Desenho da forca representando os erros do jogador">
-+---+
-|   |
+<pre aria-label="Desenho da forca representando os erros do jogador">
++----+
+|    |
 |    
 |    
 |    
 |    
 =========
-            </pre>
+</pre>
             <figcaption>Estado atual da forca</figcaption>
         </figure>
     </section>
@@ -72,7 +71,7 @@
             <li><button type="button">B</button></li>
             <li><button type="button">C</button></li>
             <li><button type="button">D</button></li>
-            <li~/Documentos/PalavraSecreta$ ><button type="button">E</button></li>
+            <li><button type="button">E</button></li>
             <li><button type="button">F</button></li>
             <li><button type="button">G</button></li>
             <li><button type="button">H</button></li>
@@ -96,8 +95,6 @@
             <li><button type="button">Z</button></li>
         </ul>
     </section>
-
-    <hr>
 
     <!-- Status -->
     <section aria-labelledby="titulo-status">
@@ -127,8 +124,7 @@
 
         <label for="novaDificuldade">Dificuldade:</label>
         <select id="novaDificuldade" name="novaDificuldade">
-            <option value="facil">Fácil</option><!DOCTYPE html>
-<html lang="pt-br">
+            <option value="facil">Fácil</option>
             <option value="medio">Médio</option>
             <option value="dificil">Difícil</option>
         </select>

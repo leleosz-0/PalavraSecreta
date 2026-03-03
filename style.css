@@ -1,0 +1,202 @@
+/* ======================
+   RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======================
+   HEADER
+====================== */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+/* ======================
+   LAYOUT PRINCIPAL
+====================== */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* ======================
+   CONFIGURAÇÕES
+====================== */
+select,
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+#btnIniciar {
+  background-color: #4caf50;
+  color: white;
+}
+
+#btnIniciar:hover {
+  background-color: #388e3c;
+}
+
+/* ======================
+   FORCA (ESPELHADA)
+====================== */
+figure {
+  text-align: left; /* Parte grande fica à esquerda */
+}
+
+figure pre {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* ======================
+   PALAVRA
+====================== */
+#palavra {
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 12px;
+  margin-top: 10px;
+}
+
+/* ======================
+   TECLADO
+====================== */
+#teclado {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+#teclado li {
+  width: 100%;
+}
+
+#teclado button {
+  width: 100%;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+#teclado button:hover {
+  background-color: #4caf50;
+}
+
+#teclado button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* ======================
+   STATUS
+====================== */
+#mensagem {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#btnReiniciar {
+  background-color: #2196f3;
+  color: white;
+  margin-right: 5px;
+}
+
+#btnReiniciar:hover {
+  background-color: #1976d2;
+}
+
+#btnCompartilhar {
+  background-color: #ff9800;
+  color: white;
+}
+
+#btnCompartilhar:hover {
+  background-color: #e68900;
+}
+
+/* ======================
+   ASIDE (CADASTRO)
+====================== */
+aside {
+  background-color: #1a1a1a;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+aside h2 {
+  margin-bottom: 15px;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+/* ======================
+   RESPONSIVO
+====================== */
+@media (max-width: 600px) {
+  #teclado {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
