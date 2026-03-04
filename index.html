@@ -8,18 +8,19 @@
 </head>
 <body>
 
-<header>
+<header class="topo">
     <h1>Jogo da Forca</h1>
+    <button id="btnCadastro">Cadastrar Palavra</button>
 </header>
 
 <main>
 
     <!-- Configurações -->
-    <section aria-labelledby="titulo-config">
-        <h2 id="titulo-config">Configurações</h2>
+    <section>
+        <h2>Configurações</h2>
 
         <label for="tema">Tema:</label>
-        <select id="tema" name="tema">
+        <select id="tema">
             <option value="animais">Animais</option>
             <option value="frutas">Frutas</option>
             <option value="paises">Países</option>
@@ -27,7 +28,7 @@
         </select>
 
         <label for="dificuldade">Dificuldade:</label>
-        <select id="dificuldade" name="dificuldade">
+        <select id="dificuldade">
             <option value="facil">Fácil</option>
             <option value="medio">Médio</option>
             <option value="dificil">Difícil</option>
@@ -37,71 +38,63 @@
     </section>
 
     <!-- Forca -->
-    <section aria-labelledby="titulo-forca">
-        <h2 id="titulo-forca">Forca</h2>
+    <section>
+        <h2>Forca</h2>
 
         <figure>
-<pre aria-label="Desenho da forca representando os erros do jogador">
-+----+
-|    |
+<pre>
++---------+
+|         |
 |    
 |    
+|
+|
 |    
-|    
-=========
+|
+|
+|
+============
 </pre>
-            <figcaption>Estado atual da forca</figcaption>
         </figure>
     </section>
 
-    <!-- Palavra Oculta -->
-    <section aria-labelledby="titulo-palavra">
-        <h2 id="titulo-palavra">Palavra</h2>
-        <p id="palavra" aria-live="polite">
-            _ _ _ _ _
-        </p>
+    <!-- Palavra -->
+    <section>
+        <h2>Palavra</h2>
+        <p id="palavra">_ _ _ _ _</p>
     </section>
 
-    <!-- Teclado -->
-    <section aria-labelledby="titulo-teclado">
-        <h2 id="titulo-teclado">Teclado</h2>
+    <!-- Teclado estilo TERMO -->
+    <section>
+        <h2>Teclado</h2>
 
-        <ul id="teclado">
-            <li><button type="button">A</button></li>
-            <li><button type="button">B</button></li>
-            <li><button type="button">C</button></li>
-            <li><button type="button">D</button></li>
-            <li><button type="button">E</button></li>
-            <li><button type="button">F</button></li>
-            <li><button type="button">G</button></li>
-            <li><button type="button">H</button></li>
-            <li><button type="button">I</button></li>
-            <li><button type="button">J</button></li>
-            <li><button type="button">K</button></li>
-            <li><button type="button">L</button></li>
-            <li><button type="button">M</button></li>
-            <li><button type="button">N</button></li>
-            <li><button type="button">O</button></li>
-            <li><button type="button">P</button></li>
-            <li><button type="button">Q</button></li>
-            <li><button type="button">R</button></li>
-            <li><button type="button">S</button></li>
-            <li><button type="button">T</button></li>
-            <li><button type="button">U</button></li>
-            <li><button type="button">V</button></li>
-            <li><button type="button">W</button></li>
-            <li><button type="button">X</button></li>
-            <li><button type="button">Y</button></li>
-            <li><button type="button">Z</button></li>
-        </ul>
+        <div id="teclado">
+
+            <div class="linha">
+                <button>Q</button><button>W</button><button>E</button>
+                <button>R</button><button>T</button><button>Y</button>
+                <button>U</button><button>I</button><button>O</button><button>P</button>
+            </div>
+
+            <div class="linha">
+                <button>A</button><button>S</button><button>D</button>
+                <button>F</button><button>G</button><button>H</button>
+                <button>J</button><button>K</button><button>L</button>
+            </div>
+
+            <div class="linha">
+                <button>Z</button><button>X</button><button>C</button>
+                <button>V</button><button>B</button><button>N</button>
+                <button>M</button>
+            </div>
+
+        </div>
     </section>
 
     <!-- Status -->
-    <section aria-labelledby="titulo-status">
-        <h2 id="titulo-status">Status</h2>
-        <p id="mensagem" aria-live="polite">
-            Aguardando início...
-        </p>
+    <section>
+        <h2>Status</h2>
+        <p id="mensagem">Aguardando início...</p>
 
         <button type="button" id="btnReiniciar">Reiniciar</button>
         <button type="button" id="btnCompartilhar">Compartilhar Resultado</button>
@@ -109,35 +102,15 @@
 
 </main>
 
-<!-- Conteúdo Secundário -->
-<aside aria-labelledby="titulo-cadastro">
-
-    <h2 id="titulo-cadastro">Cadastrar Nova Palavra</h2>
-
-    <form id="formCadastro">
-
-        <label for="novaPalavra">Palavra:</label>
-        <input type="text" id="novaPalavra" name="novaPalavra" required>
-
-        <label for="novoTema">Tema:</label>
-        <input type="text" id="novoTema" name="novoTema" required>
-
-        <label for="novaDificuldade">Dificuldade:</label>
-        <select id="novaDificuldade" name="novaDificuldade">
-            <option value="facil">Fácil</option>
-            <option value="medio">Médio</option>
-            <option value="dificil">Difícil</option>
-        </select>
-
-        <button type="submit">Cadastrar</button>
-
-    </form>
-
-</aside>
-
 <footer>
     <p>Projeto Educacional - Jogo da Forca</p>
 </footer>
+
+<script>
+    document.getElementById("btnCadastro").addEventListener("click", () => {
+        window.location.href = "cadastro.html";
+    });
+</script>
 
 </body>
 </html>
