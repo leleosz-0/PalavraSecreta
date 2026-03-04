@@ -37,9 +37,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 20px;
+  width: calc(100% - 60px);
+  margin: 10px auto;
   flex: 1;
 }
 
