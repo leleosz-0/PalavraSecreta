@@ -23,42 +23,45 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 14px 16px;
   background-color: #1e1e1e;
   border-bottom: 1px solid #333;
 }
 
 .topo h1 {
-  font-size: 26px;
+  font-size: clamp(20px, 6vw, 26px);
 }
 
 .topo button {
   background-color: #ff9800;
   color: white;
+  padding: 8px 12px;
+  font-size: 0.9rem;
 }
 
 /* ======================
    LAYOUT PRINCIPAL
 ====================== */
 main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 20px;
-  width: calc(50% - 20px);
-  margin: 10px auto;
-  flex: 1;
+  gap: 20px;
+  padding: 16px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 section {
   background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 16px;
+  border-radius: 12px;
 }
 
 section h2 {
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin-bottom: 12px;
+  font-size: clamp(16px, 4.5vw, 18px);
 }
 
 /* ======================
@@ -66,15 +69,16 @@ section h2 {
 ====================== */
 select,
 input {
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
   border-radius: 6px;
   border: none;
   width: 100%;
+  font-size: 16px;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
@@ -83,38 +87,31 @@ button {
 }
 
 button:hover {
-  opacity: 0.85;
+  opacity: 0.9;
+  transform: scale(1.03);
 }
 
 /* ======================
    BOTÕES ESPECÍFICOS
 ====================== */
-#btnIniciar {
-  background-color: #4caf50;
-  color: white;
-}
-
-#btnReiniciar {
-  background-color: #2196f3;
-  color: white;
-  margin-right: 5px;
-}
-
-#btnCompartilhar {
-  background-color: #ff9800;
-  color: white;
-}
+#btnIniciar { background-color: #4caf50; color: white; }
+#btnReiniciar { background-color: #2196f3; color: white; }
+#btnCompartilhar { background-color: #ff9800; color: white; }
 
 /* ======================
    FORCA
 ====================== */
 figure {
-  text-align: left;
+  text-align: center;
+  margin: 16px 0;
 }
 
 figure pre {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: clamp(14px, 4.2vw, 18px);
+  line-height: 1.6;
+  font-family: monospace;
+  white-space: pre-wrap;       /* ← quebra linha bonita */
+  word-break: break-all;       /* evita overflow em palavras longas */
 }
 
 /* ======================
@@ -122,9 +119,13 @@ figure pre {
 ====================== */
 #palavra {
   text-align: center;
-  font-size: 26px;
-  letter-spacing: 12px;
-  margin-top: 10px;
+  font-size: clamp(22px, 8vw, 34px);
+  letter-spacing: clamp(6px, 4vw, 12px);
+  margin: 16px 0;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ======================
@@ -133,22 +134,33 @@ figure pre {
 #teclado {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 580px;
 }
 
 .linha {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 5px;
 }
 
 #teclado button {
   background-color: #2e2e2e;
   color: white;
   border-radius: 6px;
-  padding: 10px 14px;
   font-weight: bold;
-  min-width: 40px;
+  font-size: 1.1rem;
+  flex: 1;
+  max-width: 54px;
+  aspect-ratio: 1 / 1.05;
+  min-width: 38px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;   /* melhora toque no mobile */
 }
 
 #teclado button:hover {
@@ -156,7 +168,8 @@ figure pre {
 }
 
 #teclado button:disabled {
-  background-color: #555;
+  background-color: #444;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
@@ -164,8 +177,10 @@ figure pre {
    STATUS
 ====================== */
 #mensagem {
-  margin-bottom: 10px;
+  margin: 12px 0;
   font-weight: bold;
+  font-size: clamp(14px, 4vw, 1.1rem);
+  text-align: center;
 }
 
 /* ======================
@@ -173,44 +188,33 @@ figure pre {
 ====================== */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 14px;
   background-color: #1e1e1e;
   border-top: 1px solid #333;
+  margin-top: auto;
 }
 
 /* ======================
    RESPONSIVO
 ====================== */
 @media (max-width: 768px) {
-
-  main {
-    padding: 15px;
-    gap: 20px;
-  }
-
-  section {
-    padding: 15px;
-  }
-
-  #palavra {
-    font-size: 22px;
-    letter-spacing: 8px;
-  }
-
-  figure pre {
-    font-size: 16px;
-  }
+  main { padding: 12px; gap: 16px; }
+  section { padding: 14px; }
+  #teclado { max-width: 100%; }
+  #teclado button { max-width: 48px; font-size: 1rem; min-width: 40px; }
 }
 
 @media (max-width: 480px) {
-
-  #palavra {
-    font-size: 20px;
-    letter-spacing: 6px;
+  main { padding: 10px; }
+  .topo { padding: 12px 14px; }
+  #palavra { letter-spacing: clamp(4px, 3.5vw, 8px); }
+  #teclado { gap: 4px; }
+  .linha { gap: 4px; }
+  #teclado button { 
+    max-width: 42px; 
+    font-size: 0.9rem; 
+    min-width: 36px; 
+    aspect-ratio: 1 / 1.1;
   }
-
-  #teclado button {
-    padding: 8px 10px;
-    min-width: 32px;
-  }
+  figure pre { font-size: clamp(13px, 3.8vw, 15px); }
 }
