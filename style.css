@@ -119,14 +119,14 @@ figure pre {
 ====================== */
 #palavra {
   text-align: center;
-  font-size: clamp(22px, 8vw, 34px);
-  letter-spacing: clamp(6px, 4vw, 12px);
-  margin: 16px 0;
+  font-size: clamp(16px,4vw,22px);
+  letter-spacing: clamp(2px,1.2vw,4px);
+  margin: 12px 0;
   font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
 }
+
 
 /* ======================
    TECLADO ESTILO TERMO
@@ -146,22 +146,59 @@ figure pre {
   gap: 5px;
 }
 
+/* ... mantenha todo o CSS anterior que você já tinha ... */
+
+/* Adições importantes */
+
+.acertou {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.errou {
+  background-color: #f44336 !important;
+  color: white;
+}
+
+#tentativas {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 16px 0;
+  font-weight: bold;
+}
+
+#mensagem.vitoria {
+  color: #4caf50;
+  font-size: 1.6rem;
+}
+
+#mensagem.derrota {
+  color: #f44336;
+  font-size: 1.4rem;
+}
+
+#forca {
+  color: #ff9800;
+  font-size: clamp(16px, 4.5vw, 22px);
+}
+
 #teclado button {
   background-color: #2e2e2e;
   color: white;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.85rem;   /* letra menor */
   flex: 1;
-  max-width: 54px;
-  aspect-ratio: 1 / 1.05;
-  min-width: 38px;
+  max-width: 36px;      /* largura menor */
+  min-width: 28px;
+  height: 34px;         /* altura menor */
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  touch-action: manipulation;   /* melhora toque no mobile */
+  touch-action: manipulation;
 }
+
 
 #teclado button:hover {
   background-color: #4caf50;

@@ -1,116 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Forca</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Forca</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="topo">
-    <h1>Jogo da Forca</h1>
-    <button id="btnCadastro">Cadastrar Palavra</button>
+  <h1>Jogo da Forca</h1>
+  
+  <header class="topo">
+  <h1>Jogo da Forca</h1>
+
+  <div>
+    <button id="btnIniciar">Novo Jogo</button>
+    <button id="btnCadastrar">Cadastrar Palavra</button>
+  </div>
+
+</header>
+
 </header>
 
 <main>
 
-    <!-- Configurações -->
-    <section>
-        <h2>Configurações</h2>
+  <section id="cadastro" style="display: none;">
+    <h2>Cadastrar Nova Palavra</h2>
+    <form id="formCadastro">
+      <label>Palavra:</label>
+      <input type="text" id="novaPalavra" required>
 
-        <label for="tema">Tema:</label>
-        <select id="tema">
-            <option value="animais">Animais</option>
-            <option value="frutas">Frutas</option>
-            <option value="paises">Países</option>
-            <option value="aleatorio">Sortear Tema</option>
-        </select>
+      <label>Tema:</label>
+      <input type="text" id="novoTema" required>
 
-        <label for="dificuldade">Dificuldade:</label>
-        <select id="dificuldade">
-            <option value="facil">Fácil</option>
-            <option value="medio">Médio</option>
-            <option value="dificil">Difícil</option>
-        </select>
+      <label>Dificuldade:</label>
+      <select id="novaDificuldade" required>
+        <option value="Fácil">Fácil</option>
+        <option value="Médio">Médio</option>
+        <option value="Difícil">Difícil</option>
+      </select>
 
-        <button type="button" id="btnIniciar">Iniciar Jogo</button>
-    </section>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </section>
 
-    <!-- Forca -->
-    <section>
-        <h2>Forca</h2>
+  <section id="jogo" style="display: none;">
+    <h2 id="temaAtual">Tema: —</h2>
 
-        <figure>
-<pre>
-+---------+
-|         |
-|    
-|    
-|
-|
-|    
-|
-|
-|
-============
-</pre>
-        </figure>
-    </section>
+    <figure>
+      <pre id="forca"> 
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========</pre>
+    </figure>
 
-    <!-- Palavra -->
-    <section>
-        <h2>Palavra</h2>
-        <p id="palavra">_ _ _ _ _</p>
-    </section>
+    <div id="palavra"></div>
 
-    <!-- Teclado estilo TERMO -->
-    <section>
-        <h2>Teclado</h2>
+    <div id="teclado"></div>
 
-        <div id="teclado">
+    <div id="mensagem"></div>
 
-            <div class="linha">
-                <button>Q</button><button>W</button><button>E</button>
-                <button>R</button><button>T</button><button>Y</button>
-                <button>U</button><button>I</button><button>O</button><button>P</button>
-            </div>
+    <div id="tentativas">Tentativas restantes: <span id="errosRestantes">6</span></div>
 
-            <div class="linha">
-                <button>A</button><button>S</button><button>D</button>
-                <button>F</button><button>G</button><button>H</button>
-                <button>J</button><button>K</button><button>L</button>
-            </div>
-
-            <div class="linha">
-                <button>Z</button><button>X</button><button>C</button>
-                <button>V</button><button>B</button><button>N</button>
-                <button>M</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Status -->
-    <section>
-        <h2>Status</h2>
-        <p id="mensagem">Aguardando início...</p>
-
-        <button type="button" id="btnReiniciar">Reiniciar</button>
-        <button type="button" id="btnCompartilhar">Compartilhar Resultado</button>
-    </section>
+    <button id="btnReiniciar" style="display:none;">Jogar Novamente</button>
+  </section>
 
 </main>
 
 <footer>
-    <p>Projeto Educacional - Jogo da Forca</p>
+  <p>Jogo da Forca • Feito com HTML, CSS e JavaScript</p>
 </footer>
 
-<script>
-    document.getElementById("btnCadastro").addEventListener("click", () => {
-        window.location.href = "cadastro.html";
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
