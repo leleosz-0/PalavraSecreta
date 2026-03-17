@@ -1,5 +1,7 @@
-// Palavras iniciais
-let palavras = [
+// ───────────────────────────────────────
+// Configurações iniciais
+// ───────────────────────────────────────
+const palavras = [
   { palavra: "sol", tema: "Natureza", dificuldade: "Fácil" },
   { palavra: "computador", tema: "Tecnologia", dificuldade: "Médio" },
   { palavra: "abacaxi", tema: "Frutas", dificuldade: "Médio" },
@@ -11,11 +13,10 @@ let temaAtual = "";
 let letrasErradas = [];
 let letrasAcertadas = new Set();
 let erros = 0;
-
 const maxErros = 6;
 
 const forcaEstagios = [
-` 
+  `
   +---+
   |   |
       |
@@ -23,23 +24,23 @@ const forcaEstagios = [
       |
       |
 =========`,
-` 
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========`,
-` 
+  `
   +---+
   |   |
   O   |
+      |
+      |
+      |
+=========`,
+  `
+  +---+
+  |   |
+  O   |
   |   |
       |
       |
 =========`,
-` 
+  `
   +---+
   |   |
   O   |
@@ -47,49 +48,52 @@ const forcaEstagios = [
       |
       |
 =========`,
-` 
+  `
   +---+
   |   |
   O   |
- /|\  |
+ /|\\  |
       |
       |
 =========`,
-` 
+  `
   +---+
   |   |
   O   |
- /|\  |
+ /|\\  |
  /    |
       |
 =========`,
-` 
+  `
   +---+
   |   |
   O   |
- /|\  |
- / \  |
+ /|\\  |
+ / \\  |
       |
 =========`
 ];
 
-const elPalavra = document.getElementById("palavra");
-const elTeclado = document.getElementById("teclado");
-const elMensagem = document.getElementById("mensagem");
-const elForca = document.getElementById("forca");
-const elTentativas = document.getElementById("errosRestantes");
+// ───────────────────────────────────────
+// Elementos do DOM (cache)
+const $ = id => document.getElementById(id);
+const els = {
+  palavra: $("palavra"),
+  teclado: $("teclado"),
+  mensagem: $("mensagem"),
+  forca: $("forca"),
+  tentativas: $("errosRestantes"),
+  temaAtual: $("temaAtual"),
+  btnReiniciar: $("btnReiniciar"),
+  sectionCadastro: $("cadastro"),
+  sectionJogo: $("jogo"),
+  formCadastro: $("formCadastro")
+};
 
-const btnIniciar = document.getElementById("btnIniciar");
-const btnReiniciar = document.getElementById("btnReiniciar");
-const btnCadastrar = document.getElementById("btnCadastrar");
-
-const sectionCadastro = document.getElementById("cadastro");
-const sectionJogo = document.getElementById("jogo");
-
-const formCadastro = document.getElementById("formCadastro");
-
+// ───────────────────────────────────────
+// Funções principais
+// ───────────────────────────────────────
 function iniciarJogo() {
-
   const idx = Math.floor(Math.random() * palavras.length);
   const obj = palavras[idx];
 
@@ -100,196 +104,175 @@ function iniciarJogo() {
   letrasAcertadas = new Set();
   erros = 0;
 
-  document.getElementById("temaAtual").textContent = "Tema: " + temaAtual;
+  els.temaAtual.textContent = `Tema: ${temaAtual}`;
+  els.temaAtual.className = "";                 // limpa classes de vitória/derrota
+  els.mensagem.textContent = "";
+  els.mensagem.className = "mensagem";
+  els.sectionJogo.className = "";                 // limpa bg de vitoria/derrota
 
-  elMensagem.textContent = "";
-  elMensagem.className = "";
-
-  btnReiniciar.style.display = "none";
+  els.btnReiniciar.style.display = "none";
 
   atualizarPalavra();
   atualizarForca();
   criarTeclado();
 
-  sectionCadastro.style.display = "none";
-  sectionJogo.style.display = "block";
+  els.sectionCadastro.style.display = "none";
+  els.sectionJogo.style.display = "block";
 }
 
 function atualizarPalavra() {
-
   let display = "";
-
   for (let letra of palavraSecreta) {
-
-    if (letrasAcertadas.has(letra)) {
-      display += letra + " ";
-    } else {
-      display += "_ ";
-    }
-
+    display += letrasAcertadas.has(letra) ? letra + " " : "_ ";
   }
-
-  elPalavra.textContent = display.trim();
+  els.palavra.textContent = display.trim();
 }
 
 function atualizarForca() {
-
-  elForca.textContent = forcaEstagios[erros];
-  elTentativas.textContent = maxErros - erros;
-
+  els.forca.textContent = forcaEstagios[erros];
+  els.tentativas.textContent = maxErros - erros;
 }
 
 function criarTeclado() {
+  els.teclado.innerHTML = "";
 
-  elTeclado.innerHTML = "";
+  const linhas = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 
-  const linhasTeclado = [
-    "QWERTYUIOP",
-    "ASDFGHJKL",
-    "ZXCVBNM"
-  ];
-
-  linhasTeclado.forEach(linha => {
-
+  linhas.forEach(linha => {
     const div = document.createElement("div");
     div.className = "linha";
 
     linha.split("").forEach(letra => {
-
       const btn = document.createElement("button");
-
       btn.textContent = letra;
       btn.dataset.letra = letra;
-
       btn.addEventListener("click", () => tentarLetra(letra, btn));
-
       div.appendChild(btn);
-
     });
 
-    elTeclado.appendChild(div);
-
+    els.teclado.appendChild(div);
   });
-
 }
 
 function tentarLetra(letra, botao) {
-
   botao.disabled = true;
 
   if (palavraSecreta.includes(letra)) {
-
     letrasAcertadas.add(letra);
     botao.classList.add("acertou");
-
     atualizarPalavra();
 
     if ([...palavraSecreta].every(l => letrasAcertadas.has(l))) {
-
-      elMensagem.textContent = "Parabéns! Você venceu!";
-      elMensagem.className = "vitoria";
-
-      desabilitarTeclado();
-
-      btnReiniciar.style.display = "block";
-
+      finalizarJogo(true);
     }
-
-  }
-
-  else {
-
+  } else {
     if (!letrasErradas.includes(letra)) {
-
       letrasErradas.push(letra);
-
       erros++;
-
       botao.classList.add("errou");
-
       atualizarForca();
 
       if (erros >= maxErros) {
-
-        elMensagem.textContent = "Você perdeu! A palavra era: " + palavraSecreta;
-        elMensagem.className = "derrota";
-
-        desabilitarTeclado();
-
-        btnReiniciar.style.display = "block";
-
+        finalizarJogo(false);
       }
-
     }
+  }
+}
 
+function finalizarJogo(venceu) {
+  desabilitarTeclado();
+
+  if (venceu) {
+    els.mensagem.textContent = "Parabéns! Você venceu! 🎉";
+    els.mensagem.className = "mensagem vitoria";
+    els.temaAtual.className = "vitoria";
+    els.sectionJogo.className = "vitoria";
+  } else {
+    els.mensagem.textContent = `Você perdeu! A palavra era: ${palavraSecreta}`;
+    els.mensagem.className = "mensagem derrota";
+    els.temaAtual.className = "derrota";
+    els.sectionJogo.className = "derrota";
   }
 
+  els.btnReiniciar.style.display = "block";
 }
 
 function desabilitarTeclado() {
-
   document.querySelectorAll("#teclado button").forEach(btn => {
-
     btn.disabled = true;
-
   });
-
 }
 
-document.addEventListener("keydown", e => {
+// ───────────────────────────────────────
+// Eventos + Inicialização segura
+// ───────────────────────────────────────
+document.addEventListener("DOMContentLoaded", () => {
+  // Re-atribui os elementos (garante que existem)
+  const els = {
+    palavra:        document.getElementById("palavra"),
+    teclado:        document.getElementById("teclado"),
+    mensagem:       document.getElementById("mensagem"),
+    forca:          document.getElementById("forca"),
+    tentativas:     document.getElementById("errosRestantes"),
+    temaAtual:      document.getElementById("temaAtual"),
+    btnReiniciar:   document.getElementById("btnReiniciar"),
+    sectionCadastro: document.getElementById("cadastro"),
+    sectionJogo:    document.getElementById("jogo"),
+    formCadastro:   document.getElementById("formCadastro"),
+    btnIniciar:     document.getElementById("btnIniciar"),
+    novaPalavra:    document.getElementById("novaPalavra"),
+    novoTema:       document.getElementById("novoTema"),
+    novaDificuldade: document.getElementById("novaDificuldade")
+  };
 
-  const letra = e.key.toUpperCase();
-
-  if (!letra.match(/^[A-Z]$/)) return;
-
-  const botao = document.querySelector(`#teclado button[data-letra="${letra}"]`);
-
-  if (botao && !botao.disabled) {
-
-    tentarLetra(letra, botao);
-
-  }
-
-});
-
-btnIniciar.addEventListener("click", iniciarJogo);
-
-btnReiniciar.addEventListener("click", iniciarJogo);
-
-btnCadastrar.addEventListener("click", () => {
-
-  sectionJogo.style.display = "none";
-  sectionCadastro.style.display = "block";
-
-});
-
-formCadastro.addEventListener("submit", e => {
-
-  e.preventDefault();
-
-  const palavra = document.getElementById("novaPalavra").value.trim().toUpperCase();
-  const tema = document.getElementById("novoTema").value.trim();
-  const dificuldade = document.getElementById("novaDificuldade").value;
-
-  if (palavra.length < 3) {
-
-    alert("A palavra precisa ter pelo menos 3 letras.");
-
+  // Verifica se elementos críticos existem
+  if (!els.btnIniciar) {
+    console.error("ERRO: botão #btnIniciar não encontrado!");
     return;
-
+  }
+  if (!els.sectionJogo) {
+    console.error("ERRO: section #jogo não encontrada!");
+    return;
   }
 
-  palavras.push({ palavra, tema, dificuldade });
+  // Eventos
+  els.btnIniciar.addEventListener("click", iniciarJogo);
+  if (els.btnReiniciar) {
+    els.btnReiniciar.addEventListener("click", iniciarJogo);
+  }
 
-  alert("Palavra cadastrada com sucesso!");
+  if (els.formCadastro) {
+    els.formCadastro.addEventListener("submit", e => {
+      e.preventDefault();
 
-  formCadastro.reset();
+      const palavra = els.novaPalavra.value.trim().toUpperCase();
+      const tema    = els.novoTema.value.trim();
+      const dif     = els.novaDificuldade.value;
 
+      if (palavra.length < 3) {
+        alert("A palavra precisa ter pelo menos 3 letras.");
+        return;
+      }
+
+      palavras.push({ palavra, tema, dificuldade: dif });
+      alert("Palavra cadastrada com sucesso!");
+      els.formCadastro.reset();
+      iniciarJogo();
+    });
+  }
+
+  // Teclado físico (sempre disponível)
+  document.addEventListener("keydown", e => {
+    const letra = e.key.toUpperCase();
+    if (!/^[A-Z]$/.test(letra)) return;
+
+    const botao = document.querySelector(`#teclado button[data-letra="${letra}"]`);
+    if (botao && !botao.disabled) {
+      tentarLetra(letra, botao);
+    }
+  });
+
+  // Inicia o jogo
+  console.log("DOM carregado → iniciando jogo");
   iniciarJogo();
-
 });
-
-sectionCadastro.style.display = "none";
-sectionJogo.style.display = "block";
-
-iniciarJogo();

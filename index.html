@@ -10,31 +10,23 @@
 
 <header class="topo">
   <h1>Jogo da Forca</h1>
-  
-  <header class="topo">
-  <h1>Jogo da Forca</h1>
-
-  <div>
+  <div class="botoes-topo">
     <button id="btnIniciar">Novo Jogo</button>
     <button id="btnCadastrar">Cadastrar Palavra</button>
   </div>
-
-</header>
-
 </header>
 
 <main>
-
   <section id="cadastro" style="display: none;">
     <h2>Cadastrar Nova Palavra</h2>
     <form id="formCadastro">
-      <label>Palavra:</label>
-      <input type="text" id="novaPalavra" required>
+      <label for="novaPalavra">Palavra:</label>
+      <input type="text" id="novaPalavra" required autocomplete="off">
 
-      <label>Tema:</label>
+      <label for="novoTema">Tema:</label>
       <input type="text" id="novoTema" required>
 
-      <label>Dificuldade:</label>
+      <label for="novaDificuldade">Dificuldade:</label>
       <select id="novaDificuldade" required>
         <option value="Fácil">Fácil</option>
         <option value="Médio">Médio</option>
@@ -45,31 +37,25 @@
     </form>
   </section>
 
-  <section id="jogo" style="display: none;">
+  <section id="jogo">
     <h2 id="temaAtual">Tema: —</h2>
 
     <figure>
-      <pre id="forca"> 
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========</pre>
+      <pre id="forca"></pre>
     </figure>
 
     <div id="palavra"></div>
 
     <div id="teclado"></div>
 
-    <div id="mensagem"></div>
+    <div id="mensagem" class="mensagem"></div>
 
-    <div id="tentativas">Tentativas restantes: <span id="errosRestantes">6</span></div>
+    <div id="tentativas">
+      Tentativas restantes: <span id="errosRestantes">6</span>
+    </div>
 
     <button id="btnReiniciar" style="display:none;">Jogar Novamente</button>
   </section>
-
 </main>
 
 <footer>
