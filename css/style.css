@@ -232,8 +232,8 @@ figure pre {
 }
 
 #teclado button.errou {
-  background-color: #444 !important;
-  color: white;
+  background-color: #2e2e2e44 !important;
+  color: #eeeeee44;
 }
 
 /* ======================
@@ -246,16 +246,6 @@ figure pre {
   text-align: center;
 }
 
-/* ======================
-   FOOTER
-====================== */
-footer {
-  text-align: center;
-  padding: 14px;
-  background-color: #1e1e1e;
-  border-top: 1px solid #333;
-  margin-top: auto;
-}
 
 /* ======================
    RESPONSIVO
