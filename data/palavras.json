@@ -1,0 +1,447 @@
+[
+  {
+    "palavra": "sol",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "floresta",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "rio",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cachoeira",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "montanha",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "oceano",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "praia",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lago",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "deserto",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "vulcão",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "caverna",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "árvore",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "folha",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "raiz",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "flor",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "semente",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tronco",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "galho",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "arbusto",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "selva",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mata",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "savana",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tundra",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "vale",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ilha",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "penhasco",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "rocha",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "areia",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "terra",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "solo",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lama",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "neve",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "gelo",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "nuvem",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "chuva",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tempestade",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "vento",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "brisa",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "arco-íris",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "sol",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lua",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "estrela",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "horizonte",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ecossistema",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "biodiversidade",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "fauna",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "flora",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "animal",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "inseto",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pássaro",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "peixe",
+    "tema": "Natureza",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bioma",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "manguezal",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "estuário",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cordilheira",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "planalto",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "planície",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "delta",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "lençol freático",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "afluente",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "nascentes",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "serapilheira",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "fotossíntese",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "polinização",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cadeia alimentar",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "habitat",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "nicho ecológico",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "erosão",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "intemperismo",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "bacia hidrográfica",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "vegetação",
+    "tema": "Natureza",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "fitogeografia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "zoogeografia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "biogeoquímico",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "hidrogeologia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "geomorfologia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "anemometria",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "evapotranspiração",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "criopreservação",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "termorregulação",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "ecotoxicologia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "bioacumulação",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "especiação",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "paleoclimatologia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "estratigrafia",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "bioluminescência",
+    "tema": "Natureza",
+    "dificuldade": "Difícil"
+  },
+  { //parei aqui
+    "palavra": "computador",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "abacaxi",
+    "tema": "Frutas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "paralelepipedo",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  }
+]

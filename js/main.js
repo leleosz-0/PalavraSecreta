@@ -1,7 +1,7 @@
-// main.js
-import { palavras, cadastrarPalavra } from './words.js';
+// js/main.js
+import { carregarTodasPalavras, adicionarPalavra } from './data.js';
 import { iniciarJogo, tentarLetra } from './game.js';
-import { atualizarPalavra, criarTeclado, atualizarForca } from './ui.js';
+import { atualizarPalavra, criarTeclado, atualizarForca, desabilitarTeclado, mostrarMensagemFinal } from './ui.js';
 
 const els = {
   btnIniciar: document.getElementById("btnIniciar"),
@@ -14,6 +14,8 @@ const els = {
   sectionJogo: document.getElementById("jogo")
 };
 
+let palavrasDisponiveis = [];  // ← declaramos aqui
+
 function mostrarJogo() {
   els.sectionCadastro.style.display = "none";
   els.sectionJogo.style.display = "block";
@@ -24,37 +26,45 @@ function mostrarCadastro() {
   els.sectionCadastro.style.display = "block";
 }
 
-// Eventos
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  // Carrega todas as palavras (JSON + localStorage)
+  palavrasDisponiveis = await carregarTodasPalavras();
+
   // Botão Novo Jogo
   els.btnIniciar.addEventListener("click", () => {
     mostrarJogo();
-    iniciarJogo(palavras);
+    iniciarJogo(palavrasDisponiveis);
   });
 
   // Botão Jogar Novamente
   if (els.btnReiniciar) {
-    els.btnReiniciar.addEventListener("click", () => iniciarJogo(palavras));
+    els.btnReiniciar.addEventListener("click", () => {
+      iniciarJogo(palavrasDisponiveis);
+    });
   }
 
-  // Cadastro de palavra
+  // Cadastro de nova palavra
   if (els.formCadastro) {
-    els.formCadastro.addEventListener("submit", e => {
+    els.formCadastro.addEventListener("submit", async e => {
       e.preventDefault();
 
       const palavra = els.novaPalavra.value.trim();
       const tema = els.novoTema.value.trim();
       const dif = els.novaDificuldade.value;
 
-      if (cadastrarPalavra(palavra, tema, dif)) {
+      const sucesso = await adicionarPalavra(palavra, tema, dif);
+
+      if (sucesso) {
         els.formCadastro.reset();
+        // Recarrega a lista atualizada
+        palavrasDisponiveis = await carregarTodasPalavras();
         mostrarJogo();
-        iniciarJogo(palavras);
+        iniciarJogo(palavrasDisponiveis);
       }
     });
   }
 
-  // Teclado físico
+  // Teclado físico (permanece igual)
   document.addEventListener("keydown", e => {
     const letra = e.key.toUpperCase();
     if (!/^[A-Z]$/.test(letra)) return;
@@ -65,13 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Centraliza tentativa de letra (clique ou teclado físico)
   window.addEventListener("tentar-letra", (e) => {
     const { letra, botao } = e.detail;
     tentarLetra(letra, botao);
   });
 
-  // Inicia o jogo na carga inicial
+  // Inicia o jogo na primeira carga
   mostrarJogo();
-  iniciarJogo(palavras);
+  iniciarJogo(palavrasDisponiveis);
 });
