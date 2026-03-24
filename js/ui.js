@@ -68,9 +68,17 @@ const forcaEstagios = [
 
 export function atualizarPalavra(palavraSecreta, letrasAcertadas) {
   let display = "";
-  for (let letra of palavraSecreta) {
-    display += letrasAcertadas.has(letra) ? letra + " " : "_ ";
+
+  for (let char of palavraSecreta) {
+    if (char === " ") {
+      display += " ";        // 3 espaços para separar bem as palavras
+    } else if (letrasAcertadas.has(char)) {
+      display += char + " ";
+    } else {
+      display += "_ ";
+    }
   }
+
   palavraEl.textContent = display.trim();
 }
 

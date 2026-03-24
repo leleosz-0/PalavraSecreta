@@ -76,6 +76,7 @@ export function iniciarJogo(palavrasDisponiveis) {
 
   letrasErradas = [];
   letrasAcertadas = new Set();
+  letrasAcertadas.add(" ");
   erros = 0;
 
   atualizarPalavra(palavraSecreta, letrasAcertadas);
@@ -96,7 +97,12 @@ export function tentarLetra(letra, botao) {
     botao.classList.add("acertou");
     atualizarPalavra(palavraSecreta, letrasAcertadas);
 
-    if ([...palavraSecreta].every(l => letrasAcertadas.has(l))) {
+    // ✅ CORREÇÃO: ignora espaços na verificação de vitória
+    const acertouTudo = [...palavraSecreta]
+      .filter(l => l !== " ")           // remove os espaços
+      .every(l => letrasAcertadas.has(l));
+
+    if (acertouTudo) {
       finalizarJogo(true);
     }
   } else {
