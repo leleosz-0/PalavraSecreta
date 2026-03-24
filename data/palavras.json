@@ -45,7 +45,7 @@
     "dificuldade": "Fácil"
   },
   {
-    "palavra": "vulcão",
+    "palavra": "vulcao",
     "tema": "Natureza",
     "dificuldade": "Fácil"
   },
@@ -55,7 +55,7 @@
     "dificuldade": "Fácil"
   },
   {
-    "palavra": "árvore",
+    "palavra": "arvore",
     "tema": "Natureza",
     "dificuldade": "Fácil"
   },
@@ -154,7 +154,7 @@
     "tema": "Natureza",
     "dificuldade": "Fácil"
   },
-  {
+  {   
     "palavra": "neve",
     "tema": "Natureza",
     "dificuldade": "Fácil"
@@ -190,7 +190,7 @@
     "dificuldade": "Fácil"
   },
   {
-    "palavra": "arco-íris",
+    "palavra": "arco iris",
     "tema": "Natureza",
     "dificuldade": "Fácil"
   },
@@ -245,7 +245,7 @@
     "dificuldade": "Fácil"
   },
   {
-    "palavra": "pássaro",
+    "palavra": "passaro",
     "tema": "Natureza",
     "dificuldade": "Fácil"
   },
@@ -265,7 +265,7 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "estuário",
+    "palavra": "estuario",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -280,7 +280,7 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "planície",
+    "palavra": "planicie",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -290,7 +290,7 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "lençol freático",
+    "palavra": "lençol freatico",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -310,12 +310,12 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "fotossíntese",
+    "palavra": "fotossintese",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
   {
-    "palavra": "polinização",
+    "palavra": "polinizacao",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -330,12 +330,12 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "nicho ecológico",
+    "palavra": "nicho ecologico",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
   {
-    "palavra": "erosão",
+    "palavra": "erosao",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -345,12 +345,12 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "bacia hidrográfica",
+    "palavra": "bacia hidrografica",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
   {
-    "palavra": "vegetação",
+    "palavra": "vegetacao",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -385,17 +385,17 @@
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "evapotranspiração",
+    "palavra": "evapotranspiracao",
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "criopreservação",
+    "palavra": "criopreservacao",
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "termorregulação",
+    "palavra": "termorregulacao",
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
@@ -405,12 +405,12 @@
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "bioacumulação",
+    "palavra": "bioacumulacao",
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "especiação",
+    "palavra": "especiacao",
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
@@ -425,11 +425,11 @@
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "bioluminescência",
+    "palavra": "bioluminescencia",
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
-  { //parei aqui
+  { 
     "palavra": "computador",
     "tema": "Tecnologia",
     "dificuldade": "Médio"

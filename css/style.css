@@ -215,7 +215,7 @@ figure pre {
   font-size: 0.85rem;   /* letra menor */
   flex: 1;
   max-width: 36px;      /* largura menor */
-  min-width: 28px;
+  min-width: 18px;
   height: 34px;         /* altura menor */
   padding: 0;
   display: flex;
