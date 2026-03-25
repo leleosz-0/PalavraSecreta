@@ -75,12 +75,12 @@ function normalizarLetra(letra) {
   return removerAcentos(letra).toUpperCase();
 }
 
-export function iniciarJogo(palavrasDisponiveis) {
-  const idx = Math.floor(Math.random() * palavrasDisponiveis.length);
-  const obj = palavrasDisponiveis[idx];
+export function iniciarJogo(palavrasFiltradas, temaForcado = null) {
+  const idx = Math.floor(Math.random() * palavrasFiltradas.length);
+  const obj = palavrasFiltradas[idx];
 
   palavraSecreta = obj.palavra.toUpperCase();
-  temaAtual = obj.tema;
+  temaAtual = temaForcado || obj.tema;   // ← agora recebe o parâmetro corretamente
 
   letrasErradas = [];
   letrasAcertadas = new Set();

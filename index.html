@@ -17,6 +17,23 @@
 </header>
 
 <main>
+  <!-- TELA INICIAL (Home) -->
+  <section id="home">
+    <div class="home-container">
+      <h1>Bem-vindo ao Jogo da Forca! 🎮</h1>
+      <p>Escolha um tema e teste seus conhecimentos!</p>
+      <button id="btnComecar" class="btn-grande">JOGAR AGORA</button>
+    </div>
+  </section>
+
+  <!-- TELA DE SELEÇÃO DE TEMAS -->
+  <section id="temas" style="display: none;">
+    <h2>Escolha o Tema</h2>
+    <div id="gridTemas" class="grid-temas"></div>
+    <button id="btnVoltarHome" class="btn-secundario">← Voltar</button>
+  </section>
+
+  <!-- CADASTRO -->
   <section id="cadastro" style="display: none;">
     <h2>Cadastrar Nova Palavra</h2>
     <form id="formCadastro">
@@ -37,7 +54,8 @@
     </form>
   </section>
 
-  <section id="jogo">
+  <!-- JOGO -->
+  <section id="jogo" style="display: none;">
     <h2 id="temaAtual">Tema: —</h2>
 
     <figure>
