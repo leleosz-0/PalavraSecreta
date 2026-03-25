@@ -72,7 +72,7 @@ export function atualizarPalavra(palavraSecreta, letrasAcertadas) {
   for (let char of palavraSecreta) {
     if (char === " ") {
       display += " ";
-    } else if (letrasAcertadas.has(char) || temAcento(char)) {
+    } else if (letrasAcertadas.has(char)) {
       display += char + " ";
     } else {
       display += "_ ";
@@ -80,11 +80,6 @@ export function atualizarPalavra(palavraSecreta, letrasAcertadas) {
   }
 
   palavraEl.textContent = display.trim();
-}
-
-function temAcento(letra) {
-  const acentuadas = "ÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇÑáàãâäéèêëíìîïóòõôöúùûüçñ";
-  return acentuadas.includes(letra);
 }
 
 export function atualizarForca(erros) {
@@ -106,7 +101,6 @@ export function criarTeclado() {
       btn.textContent = letra;
       btn.dataset.letra = letra;
       btn.addEventListener("click", () => {
-        // evento será tratado no main.js agora
         window.dispatchEvent(new CustomEvent("tentar-letra", { detail: { letra, botao: btn } }));
       });
       div.appendChild(btn);

@@ -67,13 +67,12 @@ const forcaEstagios = [
 =========`
 ];
 
-function temAcento(letra) {
-  const acentuadas = "ÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇÑáàãâäéèêëíìîïóòõôöúùûüçñ";
-  return acentuadas.includes(letra);
-}
-
 function removerAcentos(str) {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function normalizarLetra(letra) {
+  return removerAcentos(letra).toUpperCase();
 }
 
 export function iniciarJogo(palavrasDisponiveis) {
@@ -85,14 +84,8 @@ export function iniciarJogo(palavrasDisponiveis) {
 
   letrasErradas = [];
   letrasAcertadas = new Set();
-  letrasAcertadas.add(" ");
+  letrasAcertadas.add(" ");   // para tratar espaços
   erros = 0;
-
-  [...palavraSecreta].forEach(char => {
-    if (temAcento(char)) {
-      letrasAcertadas.add(char);
-    }
-  });
 
   atualizarPalavra(palavraSecreta, letrasAcertadas);
   atualizarForca(erros);
@@ -104,19 +97,21 @@ export function iniciarJogo(palavrasDisponiveis) {
   document.getElementById("btnReiniciar").style.display = "none";
 }
 
-
 export function tentarLetra(letra, botao) {
   botao.disabled = true;
-
-  const letraSemAcento = removerAcentos(letra);
-
+  const letraNormalizada = normalizarLetra(letra);
   const temLetra = [...palavraSecreta].some(char => 
-    char === letra || removerAcentos(char) === letraSemAcento
+    normalizarLetra(char) === letraNormalizada
   );
 
   if (temLetra) {
-    letrasAcertadas.add(letra);
-    letrasAcertadas.add(letraSemAcento);
+    letrasAcertadas.add(letra.toUpperCase());
+    
+    [...palavraSecreta].forEach(char => {
+      if (normalizarLetra(char) === letraNormalizada) {
+        letrasAcertadas.add(char);
+      }
+    });
 
     botao.classList.add("acertou");
     atualizarPalavra(palavraSecreta, letrasAcertadas);
