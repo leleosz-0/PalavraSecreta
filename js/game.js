@@ -67,6 +67,15 @@ const forcaEstagios = [
 =========`
 ];
 
+function temAcento(letra) {
+  const acentuadas = "ÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇÑáàãâäéèêëíìîïóòõôöúùûüçñ";
+  return acentuadas.includes(letra);
+}
+
+function removerAcentos(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 export function iniciarJogo(palavrasDisponiveis) {
   const idx = Math.floor(Math.random() * palavrasDisponiveis.length);
   const obj = palavrasDisponiveis[idx];
@@ -79,6 +88,12 @@ export function iniciarJogo(palavrasDisponiveis) {
   letrasAcertadas.add(" ");
   erros = 0;
 
+  [...palavraSecreta].forEach(char => {
+    if (temAcento(char)) {
+      letrasAcertadas.add(char);
+    }
+  });
+
   atualizarPalavra(palavraSecreta, letrasAcertadas);
   atualizarForca(erros);
   criarTeclado();
@@ -89,17 +104,25 @@ export function iniciarJogo(palavrasDisponiveis) {
   document.getElementById("btnReiniciar").style.display = "none";
 }
 
+
 export function tentarLetra(letra, botao) {
   botao.disabled = true;
 
-  if (palavraSecreta.includes(letra)) {
+  const letraSemAcento = removerAcentos(letra);
+
+  const temLetra = [...palavraSecreta].some(char => 
+    char === letra || removerAcentos(char) === letraSemAcento
+  );
+
+  if (temLetra) {
     letrasAcertadas.add(letra);
+    letrasAcertadas.add(letraSemAcento);
+
     botao.classList.add("acertou");
     atualizarPalavra(palavraSecreta, letrasAcertadas);
 
-    // ✅ CORREÇÃO: ignora espaços na verificação de vitória
     const acertouTudo = [...palavraSecreta]
-      .filter(l => l !== " ")           // remove os espaços
+      .filter(l => l !== " ")
       .every(l => letrasAcertadas.has(l));
 
     if (acertouTudo) {

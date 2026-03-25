@@ -290,7 +290,7 @@
     "dificuldade": "Médio"
   },
   {
-    "palavra": "lençol freatico",
+    "palavra": "lençol freático",
     "tema": "Natureza",
     "dificuldade": "Médio"
   },
@@ -429,19 +429,1074 @@
     "tema": "Natureza",
     "dificuldade": "Difícil"
   },
-  { 
+  {
     "palavra": "computador",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "celular",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tablet",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mouse",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "teclado",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "monitor",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "internet",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "site",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "link",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "wifi",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "senha",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "login",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "email",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "arquivo",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pasta",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "download",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "upload",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "app",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "programa",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "jogo",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "vídeo",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "foto",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "som",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "câmera",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "microfone",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "alto-falante",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "carregador",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bateria",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "energia",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cabo",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "usb",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bluetooth",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "rede",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "navegador",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "busca",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "google",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "senha",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "perfil",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "conta",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "chat",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mensagem",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "notificação",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "toque",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tela",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "touch",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "icone",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "menu",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "configuração",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "senha",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "backup",
+    "tema": "Tecnologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "hardware",
     "tema": "Tecnologia",
     "dificuldade": "Médio"
   },
   {
-    "palavra": "abacaxi",
-    "tema": "Frutas",
+    "palavra": "software",
+    "tema": "Tecnologia",
     "dificuldade": "Médio"
   },
   {
-    "palavra": "paralelepipedo",
+    "palavra": "algoritmo",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "programação",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "compilador",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "interface",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "servidor",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cliente",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "nuvem",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "criptografia",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "firewall",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "banco de dados",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "latência",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "processador",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "memória",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "armazenamento",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "resolução",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "renderização",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "automação",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "inteligência artificial",
+    "tema": "Tecnologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "polimorfismo",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "encapsulamento",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "herança",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "concorrência",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "paralelismo",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "assincronismo",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "virtualização",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "containerização",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "orquestração",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "escalabilidade",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "idempotência",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "serialização",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "desserialização",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "metaprogramação",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "criptossistema",
+    "tema": "Tecnologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "mesa",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cadeira",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "sofá",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cama",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "porta",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "janela",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "espelho",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lâmpada",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "televisão",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "controle",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "relógio",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "celular",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "carregador",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cabo",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "chave",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cadeado",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bolsa",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mochila",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "livro",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "caderno",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "caneta",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lápis",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "borracha",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "apontador",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "régua",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tesoura",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cola",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "garrafa",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "copo",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "prato",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "talher",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "panela",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "fogão",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "geladeira",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "microondas",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "liquidificador",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ventilador",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ar-condicionado",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "aspirador",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "vassoura",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "rodo",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "balde",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "toalha",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "sabão",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "shampoo",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "escova",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pente",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "perfume",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "óculos",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "sapato",
+    "tema": "Objetos",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "abajur",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cabide",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "gaveta",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "prateleira",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cortina",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "travesseiro",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cobertor",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "edredom",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "interruptor",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "extensão",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "adaptador",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "furadeira",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "martelo",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "alicate",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "parafuso",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "porca",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "arruela",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "trena",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "lanterna",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "isqueiro",
+    "tema": "Objetos",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "desumidificador",
     "tema": "Objetos",
     "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "termohigrômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "otoscópio",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "estetoscópio",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "micrômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "paquímetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "dinamômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "barômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "anemômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "osciloscópio",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "cronômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "termociclador",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "centrífuga",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "esfigmomanômetro",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "destilador",
+    "tema": "Objetos",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "banana",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "maçã",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "laranja",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "uva",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pera",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "manga",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "abacaxi",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "melancia",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "melão",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "kiwi",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "morango",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "limão",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "acerola",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "goiaba",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "caju",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "abacate",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pêssego",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ameixa",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "figo",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tangerina",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mexerica",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "maracujá",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "jabuticaba",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pitanga",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "carambola",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mamão",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "caqui",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "framboesa",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "amora",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cereja",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lichia",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "graviola",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cupuaçu",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "açaí",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "coco",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "romã",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "damasco",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "toranja",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "jaca",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "buriti",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "murici",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pequi",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "jenipapo",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "marmelo",
+    "tema": "Frutas",
+    "dificuldade": "Fácil"
   }
 ]

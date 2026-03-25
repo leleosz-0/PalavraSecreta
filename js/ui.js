@@ -71,8 +71,8 @@ export function atualizarPalavra(palavraSecreta, letrasAcertadas) {
 
   for (let char of palavraSecreta) {
     if (char === " ") {
-      display += " ";        // 3 espaços para separar bem as palavras
-    } else if (letrasAcertadas.has(char)) {
+      display += " ";
+    } else if (letrasAcertadas.has(char) || temAcento(char)) {
       display += char + " ";
     } else {
       display += "_ ";
@@ -80,6 +80,11 @@ export function atualizarPalavra(palavraSecreta, letrasAcertadas) {
   }
 
   palavraEl.textContent = display.trim();
+}
+
+function temAcento(letra) {
+  const acentuadas = "ÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜÇÑáàãâäéèêëíìîïóòõôöúùûüçñ";
+  return acentuadas.includes(letra);
 }
 
 export function atualizarForca(erros) {
