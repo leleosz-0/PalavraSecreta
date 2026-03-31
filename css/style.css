@@ -32,11 +32,26 @@ body {
   font-size: clamp(20px, 6vw, 26px);
 }
 
+.botoes-topo {
+  display: flex;
+  gap: 8px;
+}
+
 .topo button {
   background-color: #ff9800;
   color: white;
   padding: 8px 12px;
   font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.topo button:hover {
+  background-color: #e68900;
+  opacity: 1;
+  transform: none;
 }
 
 /* ======================
@@ -46,120 +61,169 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 16px;
-  max-width: 900px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 940px;
   width: 100%;
   margin: 0 auto;
 }
 
 section {
   background-color: #1e1e1e;
-  padding: 16px;
-  border-radius: 12px;
-}
-
-section h2 {
-  margin-bottom: 12px;
-  font-size: clamp(16px, 4.5vw, 18px);
-}
-
-/* ======================
-   FORMULÁRIOS
-====================== */
-select,
-input {
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: none;
+  padding: 20px;
+  border-radius: 16px;
   width: 100%;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
-}
-
-button:hover {
-  opacity: 0.9;
-  transform: scale(1.03);
 }
 
 /* ======================
-   BOTÕES ESPECÍFICOS
+   JOGO
 ====================== */
-#btnIniciar { background-color: #4caf50; color: white; }
-#btnReiniciar { background-color: #2196f3; color: white; }
-#btnCompartilhar { background-color: #ff9800; color: white; }
+#jogo {
+  max-width: 680px;
+  margin: 20px auto;
+  background-color: #1e1e1e;
+  padding: 28px 24px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+  border: 2px solid #333;
+}
 
-/* ======================
-   FORCA
-====================== */
+#jogo h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #ff9800;
+}
+
 figure {
   text-align: center;
-  margin: 16px 0;
+  margin: 16px 0 24px 0;
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #444;
 }
 
-figure pre {
-  font-size: clamp(14px, 4.2vw, 18px);
-  line-height: 1.6;
-  font-family: monospace;
-  white-space: pre-wrap;       /* ← quebra linha bonita */
-  word-break: break-all;       /* evita overflow em palavras longas */
+#forca {
+  color: #ff9800;
+  font-size: clamp(17px, 4.5vw, 24px);
+  line-height: 1.5;
 }
 
-/* ======================
-   PALAVRA
-====================== */
 #palavra {
   text-align: center;
-  font-size: clamp(16px,4vw,22px);
-  letter-spacing: clamp(2px,1.2vw,4px);
-  margin: 12px 0;
+  font-size: clamp(24px, 6vw, 36px);
+  letter-spacing: clamp(4px, 1.8vw, 8px);
+  margin: 16px 0 24px 0;
   font-weight: bold;
-  white-space: normal;
-  word-break: break-word;
+  min-height: 60px;
 }
 
+/* ======================
+   PLACAR DA SESSÃO
+====================== */
+.placar-sessao {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.placar-item {
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.placar-item span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.placar-item small {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.placar-item.vit span { color: #4caf50; }
+.placar-item.der span { color: #ff5252; }
+.placar-item.seq span { color: #ff9800; }
 
 /* ======================
-   TECLADO ESTILO TERMO
+   TECLADO
 ====================== */
 #teclado {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   margin: 20px auto;
   width: 100%;
-  max-width: 580px;
+  max-width: 620px;
 }
 
 .linha {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
 }
 
-/* ... mantenha todo o CSS anterior que você já tinha ... */
+#teclado button {
+  background-color: #2e2e2e;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  flex: 1;
+  max-width: 44px;
+  min-width: 32px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  border: 2px solid #444;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
 
-/* Adições importantes */
+#teclado button:hover:not(:disabled) {
+  background-color: #3a3a3a;
+  transform: none;
+  opacity: 1;
+}
 
-.acertou {
+#teclado button:active:not(:disabled) {
+  transform: scale(0.93);
+}
+
+/* RF08 - Verde para acerto */
+#teclado button.acertou {
   background-color: #4caf50 !important;
-  color: white;
+  color: white !important;
+  border-color: #4caf50 !important;
+  transform: scale(1.08);
 }
 
-.errou {
-  background-color: #f44336 !important;
-  color: white;
+/* RF08 - Rosa/vermelho para erro */
+#teclado button.errou {
+  background-color: #c62828 !important;
+  color: #ffcdd2 !important;
+  border-color: #e53935 !important;
+  opacity: 0.75;
 }
 
+/* ======================
+   STATUS E MENSAGENS
+====================== */
 #tentativas {
   text-align: center;
   font-size: 1.3rem;
@@ -167,110 +231,153 @@ figure pre {
   font-weight: bold;
 }
 
+#mensagem {
+  margin: 12px 0;
+  font-weight: bold;
+  font-size: clamp(15px, 4.2vw, 1.2rem);
+  text-align: center;
+  min-height: 48px;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
 #mensagem.vitoria {
   color: #4caf50;
   font-size: 1.8rem;
+  background: rgba(76,175,80,0.1);
+  border: 1px solid rgba(76,175,80,0.3);
   animation: pulse 1.5s infinite;
 }
 
 #mensagem.derrota {
   color: #ff5252;
   font-size: 1.5rem;
-  background: rgba(0,0,0,0.4);
-  padding: 8px 16px;
-  border-radius: 8px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,82,82,0.3);
+  padding: 12px 20px;
 }
 
-#temaAtual.vitoria {
-  color: #76ff03;
-  font-weight: bold;
-  font-size: clamp(20px, 5vw, 24px);
-}
-
-#temaAtual.derrota {
-  color: #ff8a80;
-}
-
-/* Animações suaves */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.08); }
-}
-
-@keyframes pulse-bg {
-  0%   { opacity: 0.92; }
-  100% { opacity: 1; }
-}
-
-#forca {
-  color: #ff9800;
-  font-size: clamp(16px, 4.5vw, 22px);
-}
-
-#teclado button {
-  background-color: #2e2e2e;
-  color: white;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 0.85rem;   /* letra menor */
-  flex: 1;
-  max-width: 36px;      /* largura menor */
-  min-width: 18px;
-  height: 34px;         /* altura menor */
-  padding: 0;
+/* ======================
+   BOTÕES PÓS-JOGO
+====================== */
+#acoesFinais {
   display: flex;
-  align-items: center;
   justify-content: center;
-  touch-action: manipulation;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-#teclado button.acertou {
-  background-color: #4caf50 !important;
+#btnReiniciar {
+  background-color: #2196f3;
   color: white;
-  transform: scale(1.1);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#btnReiniciar:hover {
+  background-color: #1976d2;
+  opacity: 1;
+  transform: none;
+}
+
+.btn-compartilhar {
+  background-color: #37474f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-compartilhar:hover {
+  background-color: #455a64;
+  opacity: 1;
+  transform: none;
+}
+
+.btn-compartilhar.copiado {
+  background-color: #2e7d32;
+}
+
+/* ======================
+   FORMULÁRIOS
+====================== */
+select, input[type="text"] {
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  width: 100%;
+  font-size: 16px;
+  background-color: #2a2a2a;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+select:focus, input[type="text"]:focus {
+  border-color: #ff9800;
+}
+
+/* Mensagem de feedback do cadastro */
+.msg-cadastro {
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.msg-cadastro.sucesso {
+  background: rgba(76,175,80,0.15);
+  color: #81c784;
+  border: 1px solid rgba(76,175,80,0.3);
+}
+
+.msg-cadastro.erro {
+  background: rgba(244,67,54,0.15);
+  color: #e57373;
+  border: 1px solid rgba(244,67,54,0.3);
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
   transition: all 0.2s;
 }
 
-#teclado button.errou {
-  background-color: #2e2e2e44 !important;
-  color: #eeeeee44;
+button:hover {
+  opacity: 0.92;
+  transform: scale(1.04);
 }
 
-/* ======================
-   STATUS
-====================== */
-#mensagem {
-  margin: 12px 0;
-  font-weight: bold;
-  font-size: clamp(14px, 4vw, 1.1rem);
-  text-align: center;
+#btnSubmitCad {
+  background-color: #ff9800;
+  color: white;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 4px;
 }
 
-
-/* ======================
-   RESPONSIVO
-====================== */
-@media (max-width: 768px) {
-  main { padding: 12px; gap: 16px; }
-  section { padding: 14px; }
-  #teclado { max-width: 100%; }
-  #teclado button { max-width: 48px; font-size: 1rem; min-width: 40px; }
+#btnSubmitCad:hover {
+  background-color: #e68900;
+  opacity: 1;
+  transform: none;
 }
 
-@media (max-width: 480px) {
-  main { padding: 10px; }
-  .topo { padding: 12px 14px; }
-  #palavra { letter-spacing: clamp(4px, 3.5vw, 8px); }
-  #teclado { gap: 4px; }
-  .linha { gap: 4px; }
-  #teclado button { 
-    max-width: 42px; 
-    font-size: 0.9rem; 
-    min-width: 36px; 
-    aspect-ratio: 1 / 1.1;
-  }
-  figure pre { font-size: clamp(13px, 3.8vw, 15px); }
-}
+/* Botões do header */
+#btnIniciar { background-color: #4caf50; color: white; }
 
 /* ======================
    HOME
@@ -279,94 +386,252 @@ figure pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 82vh;
+  padding: 20px;
   text-align: center;
 }
 
 .home-container {
-  max-width: 500px;
+  background-color: #1e1e1e;
+  padding: 50px 40px;
+  border-radius: 24px;
+  max-width: 540px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  border: 1px solid #333;
 }
 
 .home-container h1 {
-  font-size: clamp(2rem, 8vw, 3.5rem);
-  margin-bottom: 16px;
+  font-size: clamp(2.3rem, 8.5vw, 3.9rem);
+  margin-bottom: 18px;
   color: #ff9800;
 }
 
 .home-container p {
   font-size: 1.3rem;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   color: #ccc;
 }
 
 .btn-grande {
-  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
   color: white;
-  font-size: 1.6rem;
-  padding: 20px 60px;
+  font-size: 1.55rem;
+  padding: 20px 70px;
   border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 10px 30px rgba(76,175,80,0.4);
 }
 
 /* ======================
-   GRID DE TEMAS (igual sua foto)
+   FILTRO DE DIFICULDADE (RF13)
+====================== */
+.filtro-dificuldade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filtro-label {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.filtro-botoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-filtro {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 2px solid #444;
+  background: #2a2a2a;
+  color: #ccc;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-filtro:hover {
+  opacity: 1;
+  transform: none;
+  border-color: #888;
+}
+
+.btn-filtro.ativo {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: white;
+}
+
+.btn-filtro.facil.ativo   { background: #4caf50; border-color: #4caf50; }
+.btn-filtro.medio.ativo   { background: #ff9800; border-color: #ff9800; }
+.btn-filtro.dificil.ativo { background: #f44336; border-color: #f44336; }
+
+/* ======================
+   GRID DE TEMAS
 ====================== */
 #temas h2 {
   text-align: center;
-  margin-bottom: 24px;
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 16px;
+  font-size: clamp(1.6rem, 5.5vw, 2.2rem);
 }
 
 .grid-temas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 18px;
+  gap: 20px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 28px auto;
 }
 
 .tema-card {
   background: #1e1e1e;
-  border-radius: 16px;
-  padding: 24px 12px;
+  border-radius: 18px;
+  padding: 28px 16px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  border: 1px solid #2a2a2a;
   position: relative;
 }
 
 .tema-card:hover {
-  transform: translateY(-8px) scale(1.06);
-  box-shadow: 0 12px 25px rgba(255, 152, 0, 0.4);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255,152,0,0.35);
+  border-color: #ff9800;
 }
 
 .tema-card .icone {
-  font-size: 4.5rem;
+  font-size: 4.8rem;
   margin-bottom: 12px;
   display: block;
 }
 
 .tema-card h3 {
   font-size: 1.1rem;
-  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+/* Contador de palavras disponíveis no card */
+.tema-card .contagem {
+  font-size: 0.75rem;
+  color: #888;
 }
 
 .tema-card.aleatorio {
   background: linear-gradient(135deg, #ff9800, #f44336);
   color: white;
+  border-color: transparent;
 }
 
-/* Destaque quando clicado */
-.tema-card.selecionado {
-  border: 4px solid #4caf50;
-  box-shadow: 0 0 0 6px rgba(76, 175, 80, 0.3);
-}
+.tema-card.aleatorio .contagem { color: rgba(255,255,255,0.75); }
 
-/* Botão voltar */
+/* ======================
+   BTN SECUNDÁRIO
+====================== */
 .btn-secundario {
-  background: #333;
-  color: white;
-  margin: 30px auto 0;
   display: block;
+  margin: 0 auto;
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #444;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+  color: #fff;
+  border-color: #888;
+  opacity: 1;
+  transform: none;
+}
+
+/* ======================
+   ANIMAÇÕES
+====================== */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+section { animation: fadeIn 0.3s ease both; }
+
+/* ======================
+   RESPONSIVO
+====================== */
+@media (max-width: 768px) {
+  main { padding: 12px; }
+  section { padding: 16px; }
+  #jogo { padding: 18px 14px; }
+  .placar-sessao { gap: 8px; }
+  .placar-item { padding: 6px 14px; min-width: 68px; }
+  .placar-item span { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  #teclado button {
+    max-width: 36px;
+    min-width: 28px;
+    height: 42px;
+    font-size: 0.88rem;
+    border-width: 1px;
+  }
+
+  .linha { gap: 4px; }
+  #teclado { gap: 6px; }
+
+  #palavra {
+    letter-spacing: 4px;
+    font-size: clamp(20px, 5.5vw, 28px);
+  }
+
+  .filtro-dificuldade { flex-direction: column; gap: 8px; }
+
+  .home-container { padding: 36px 24px; }
+  .btn-grande { padding: 16px 48px; font-size: 1.3rem; }
+
+  #acoesFinais { flex-direction: column; align-items: center; }
+  #acoesFinais button { width: 100%; max-width: 300px; }
+}
+
+@media (max-width: 360px) {
+  #teclado button {
+    max-width: 30px;
+    min-width: 24px;
+    height: 38px;
+    font-size: 0.78rem;
+  }
+  .linha { gap: 3px; }
+}
+
+/* ======================
+   ANIMAÇÃO DE ERRO NA FORCA
+====================== */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15%      { transform: translateX(-6px); }
+  30%      { transform: translateX(6px); }
+  45%      { transform: translateX(-4px); }
+  60%      { transform: translateX(4px); }
+  75%      { transform: translateX(-2px); }
+}
+
+figure.shake {
+  animation: shake 0.4s ease;
 }
