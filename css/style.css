@@ -386,40 +386,85 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 82vh;
-  padding: 20px;
+  min-height: 100vh; /* Altura total da tela */
+  padding: 24px;
   text-align: center;
+  background: radial-gradient(ellipse at center, #1a1a1a 0%, #121212 100%);
 }
 
 .home-container {
-  background-color: #1e1e1e;
-  padding: 50px 40px;
-  border-radius: 24px;
-  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #1e1e1e 0%, #252525 100%);
+  padding: 60px 48px;
+  border-radius: 28px;
+  max-width: 520px;
   width: 100%;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(255,152,0,0.1);
   border: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+  margin: auto; /* Centraliza horizontalmente */
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,152,0,0.03) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .home-container h1 {
-  font-size: clamp(2.3rem, 8.5vw, 3.9rem);
-  margin-bottom: 18px;
+  font-size: clamp(2.5rem, 9vw, 4rem);
+  margin-bottom: 12px;
   color: #ff9800;
+  text-shadow: 0 4px 20px rgba(255,152,0,0.3);
+  position: relative;
+  text-align: center;
 }
 
 .home-container p {
-  font-size: 1.3rem;
-  margin-bottom: 42px;
-  color: #ccc;
+  font-size: 1.15rem;
+  margin-bottom: 36px;
+  color: #999;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .btn-grande {
-  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  background: linear-gradient(135deg, #4caf50 0%, #43a047 100%);
   color: white;
-  font-size: 1.55rem;
-  padding: 20px 70px;
+  font-size: 1.4rem;
+  padding: 18px 56px;
   border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(76,175,80,0.4);
+  box-shadow: 
+    0 8px 24px rgba(76,175,80,0.35),
+    0 4px 8px rgba(0,0,0,0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto; /* Centraliza o botao */
+  display: block;
+}
+
+.btn-grande:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 32px rgba(76,175,80,0.45),
+    0 6px 12px rgba(0,0,0,0.25);
+  opacity: 1;
+}
+
+.btn-grande:active {
+  transform: translateY(-1px);
 }
 
 /* ======================
@@ -597,8 +642,26 @@ section { animation: fadeIn 0.3s ease both; }
   #teclado { gap: 6px; }
 
   #palavra {
-    letter-spacing: 4px;
-    font-size: clamp(20px, 5.5vw, 28px);
+    gap: 8px;
+    font-size: clamp(14px, 3.5vw, 18px);
+  }
+
+  .letra-slot {
+    font-size: 0.95rem;
+    min-width: 0.8em;
+  }
+  
+  .palavra-espaco {
+    width: 12px;
+  }
+  
+  .home-container {
+    padding: 40px 28px;
+  }
+  
+  .btn-grande {
+    padding: 16px 44px;
+    font-size: 1.2rem;
   }
 
   .filtro-dificuldade { flex-direction: column; gap: 8px; }
@@ -634,4 +697,43 @@ section { animation: fadeIn 0.3s ease both; }
 
 figure.shake {
   animation: shake 0.4s ease;
+}
+
+/* ======================
+   ESPAÇAMENTO DE PALAVRAS (CORRIGIDO)
+====================== */
+#palavra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(20px, 4.5vw, 26px); /* Aumentado ~10% */
+  letter-spacing: 1px;
+  margin: 12px 0 20px 0;
+  min-height: 50px;
+}
+
+.palavra-grupo {
+  display: inline-flex;
+  gap: 1px;
+}
+
+.letra-slot {
+  display: inline-block;
+  min-width: 0.9em;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.8rem; 
+  margin: 0;
+  padding: 2px 1px;
+}
+
+.letra-slot.revelada {
+  color: #ffffff;
+}
+
+.palavra-espaco {
+  width: 16px; /* Espaço visual entre palavras */
 }

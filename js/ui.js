@@ -64,13 +64,39 @@ const MAX_ERROS = 6;
 
 export function atualizarPalavra(palavraSecreta, letrasAcertadas) {
   const palavraEl = getEl("palavra");
-  let display = "";
-  for (const char of palavraSecreta) {
-    if (char === " ")                  display += "  ";
-    else if (letrasAcertadas.has(char)) display += char + " ";
-    else                               display += "_ ";
-  }
-  palavraEl.textContent = display.trim();
+  palavraEl.innerHTML = "";
+
+  // Divide a palavra secreta em grupos separados por espaço
+  const grupos = palavraSecreta.split(" ");
+
+  grupos.forEach((grupo, idxGrupo) => {
+    // Cada grupo (palavra) vira um <span> flex que mantém as letras juntas
+    const grupoEl = document.createElement("span");
+    grupoEl.className = "palavra-grupo";
+
+    for (const char of grupo) {
+      const letraEl = document.createElement("span");
+      letraEl.className = "letra-slot";
+
+      if (letrasAcertadas.has(char)) {
+        letraEl.textContent = char;
+        letraEl.classList.add("revelada");
+      } else {
+        letraEl.textContent = "_";
+      }
+
+      grupoEl.appendChild(letraEl);
+    }
+
+    palavraEl.appendChild(grupoEl);
+
+    // Separador de espaço entre grupos (exceto após o último)
+    if (idxGrupo < grupos.length - 1) {
+      const espaco = document.createElement("span");
+      espaco.className = "palavra-espaco";
+      palavraEl.appendChild(espaco);
+    }
+  });
 }
 
 export function atualizarForca(erros) {
