@@ -8,12 +8,43 @@ let palavrasDisponiveis = [];
 let dificuldadeFiltro = "Todas";
 
 const themeIcons = {
-  "Natureza": "🌲",
-  "Tecnologia": "💻",
-  "Frutas": "🍎",
-  "Filmes e Series": "🎬",
-  "Objetos": "🔧",
+  "natureza": "🌲",
+  "tecnologia": "💻",
+  "frutas": "🍎",
+  "filmes e series": "🎬",
+  "objetos": "🔧",
+  "profissoes": "👷",
+  "lugares do mundo": "🌍",
+  "mitologia": "⚡",
+  "instrumentos musicais": "🎸",
+  "doencas": "🦠",
+  "corpo humano": "🧠",
+  "personagens": "🎭",
+  "animais": "🐾",
+  "esportes": "⚽",
+  "comidas": "🍕",
+  "paises": "🌎",
+  "ciencia": "🔬",
+  "historia": "📜",
+  "musica": "🎵",
+  "arte": "🎨",
+  "literatura": "📚",
+  "games": "🎮",
+  "marcas": "🏷️",
+  "cores": "🎨",
+  "veiculos": "🚗",
+  "astronomia": "🌟",
+  "moda": "👗",
+  "bebidas": "🍹",
+  "flores": "🌸",
+  "oceano": "🌊",
 };
+
+// Funcao para buscar icone de forma normalizada
+function getIconeTema(tema) {
+  const temaNormalizado = removerAcentos(tema).toLowerCase();
+  return themeIcons[temaNormalizado] || "❓";
+}
 
 function removerAcentos(str) {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -59,7 +90,7 @@ function criarCardsTemas() {
     const palavrasDoTema = palavrasFiltradas.filter(p => p.tema === tema);
     const card = document.createElement("div");
     card.className = "tema-card";
-    const icone = themeIcons[tema] || "❓";
+    const icone = getIconeTema(tema);
     card.innerHTML = `
       <span class="icone">${icone}</span>
       <h3>${tema}</h3>

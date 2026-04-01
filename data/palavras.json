@@ -1910,7 +1910,7 @@
     "dificuldade": "Difícil"
   },
   {
-    "palavra": "dr fantastico",
+    "palavra": "dr fantástico",
     "tema": "Filmes e Séries",
     "dificuldade": "Difícil"
   },
@@ -1927,6 +1927,971 @@
   {
     "palavra": "tudo em todo lugar ao mesmo tempo",
     "tema": "Filmes e Séries",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "médico",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "professor",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "engenheiro",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "policial",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bombeiro",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "dentista",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "advogado",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "motorista",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cozinheiro",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "garçom",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "neurocirurgião",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "engenheiro aeroespacial",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "oftalmologista",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "paleontólogo",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "bioquímico",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "arquiteto",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "jornalista",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "fotógrafo",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "eletricista",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "encanador",
+    "tema": "Profissões",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "psicólogo",
+    "tema": "Profissões",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "nutricionista",
+    "tema": "Profissões",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "farmacêutico",
+    "tema": "Profissões",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "programador",
+    "tema": "Profissões",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "analista de sistemas",
+    "tema": "Profissões",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "engenheiro mecatrônico",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "cardiologista",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "dermatologista",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "engenheiro nuclear",
+    "tema": "Profissões",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "roma",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "berlim",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "madrid",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lisboa",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "dubai",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "copenhague",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "reykjavik",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "budapeste",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "ulaanbaatar",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "antananarivo",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "brasil",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "paris",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "nova york",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tokyo",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "londres",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "machu picchu",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "petra",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "antártida",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "uzbequistão",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "liechtenstein",
+    "tema": "Lugares do mundo",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "ares",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "apolo",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "afrodite",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "odin",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "freya",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cerbero",
+    "tema": "Mitologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "hidra",
+    "tema": "Mitologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "pegaso",
+    "tema": "Mitologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "tyrannos",
+    "tema": "Mitologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "yggdrasil",
+    "tema": "Mitologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "zeus",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "thor",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "loki",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "hades",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "poseidon",
+    "tema": "Mitologia",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "medusa",
+    "tema": "Mitologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "minotauro",
+    "tema": "Mitologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "fenrir",
+    "tema": "Mitologia",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "quetzalcoatl",
+    "tema": "Mitologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "amaterasu",
+    "tema": "Mitologia",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "violão",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "guitarra",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bateria",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "piano",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "flauta",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "saxofone",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "trombone",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "violoncelo",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cravo",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "teremim",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "ukulele",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tambor",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pandeiro",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "violino",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "harpa",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "clarinete",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "oboé",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "fagote",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "didgeridoo",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "sitar",
+    "tema": "Instrumentos musicais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "resfriado",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "febre",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "enxaqueca",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "anemia",
+    "tema": "Doenças",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "hepatite",
+    "tema": "Doenças",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "meningite",
+    "tema": "Doenças",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "leucemia",
+    "tema": "Doenças",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "fibromialgia",
+    "tema": "Doenças",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "esclerose múltipla",
+    "tema": "Doenças",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "gripe",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "dengue",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "covid",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "asma",
+    "tema": "Doenças",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "diabetes",
+    "tema": "Doenças",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "hipertensão",
+    "tema": "Doenças",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "pneumonia",
+    "tema": "Doenças",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "tuberculose",
+    "tema": "Doenças",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "esquizofrenia",
+    "tema": "Doenças",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "encefalopatia",
+    "tema": "Doenças",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "cabeça",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "braço",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "perna",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "joelho",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cotovelo",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "dedo",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "nariz",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "olho",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "intestino",
+    "tema": "Corpo humano",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "fígado",
+    "tema": "Corpo humano",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "baço",
+    "tema": "Corpo humano",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cerebelo",
+    "tema": "Corpo humano",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "medula espinhal",
+    "tema": "Corpo humano",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "mão",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pé",
+    "tema": "Corpo humano",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "coração",
+    "tema": "Corpo humano",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "pulmão",
+    "tema": "Corpo humano",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "estômago",
+    "tema": "Corpo humano",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "hipotálamo",
+    "tema": "Corpo humano",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "hipocampo",
+    "tema": "Corpo humano",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "batman",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "superman",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "homem-aranha",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "harry potter",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "hulk",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "darth vader",
+    "tema": "Personagens",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "gandalf",
+    "tema": "Personagens",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "kratos",
+    "tema": "Personagens",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "geralt de rivia",
+    "tema": "Personagens",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "daenerys targaryen",
+    "tema": "Personagens",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "naruto",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "goku",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pikachu",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "mario",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "luigi",
+    "tema": "Personagens",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "levi ackerman",
+    "tema": "Personagens",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "itachi uchiha",
+    "tema": "Personagens",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "kratos",
+    "tema": "Personagens",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "albus dumbledore",
+    "tema": "Personagens",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "aragorn",
+    "tema": "Personagens",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "arroz",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "feijão",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "carne",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "frango",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "peixe",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pão",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "queijo",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ovo",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "leite",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "café",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "suco",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "água",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "refrigerante",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pizza",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "hambúrguer",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "batata frita",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "macarrão",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lasanha",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "bolo",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "chocolate",
+    "tema": "Comidas",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "estrogonofe",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "feijoada",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "churrasco",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "risoto",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "yakisoba",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "sushi",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "temaki",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "ceviche",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "paella",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "gnocchi",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "tapioca",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "cuscuz",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "moqueca",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "acarajé",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "brigadeiro",
+    "tema": "Comidas",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "bouillabaisse",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "ratatouille",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "coq au vin",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "beef wellington",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "foie gras",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "carbonara",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "ossobuco",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "bibimbap",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "okonomiyaki",
+    "tema": "Comidas",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "pierogi",
+    "tema": "Comidas",
     "dificuldade": "Difícil"
   }
 ]
