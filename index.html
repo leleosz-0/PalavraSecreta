@@ -11,113 +11,20 @@
 <header class="topo">
   <h1>Jogo da Forca</h1>
   <div class="botoes-topo">
-    <button id="btnIniciar">Novo Jogo</button>
-    <button id="btnCadastrar">Cadastrar Palavra</button>
+    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
   </div>
 </header>
 
 <main>
-
-  <!-- TELA INICIAL -->
   <section id="home">
     <div class="home-container">
-      <h1>Bem-vindo ao Jogo da Forca! 🎮</h1>
+      <h1>Bem-vindo ao Jogo da Forca!</h1>
       <p>Escolha um tema e teste seus conhecimentos!</p>
-      <button id="btnComecar" class="btn-grande">JOGAR AGORA</button>
+      <button class="btn-grande" onclick="location.href='temas.html'">JOGAR AGORA</button>
     </div>
   </section>
-
-  <!-- SELEÇÃO DE TEMAS -->
-  <section id="temas" style="display:none;">
-    <h2>Escolha o Tema</h2>
-
-    <!-- RF13 - Filtro de dificuldade -->
-    <div class="filtro-dificuldade">
-      <span class="filtro-label">Filtrar por dificuldade:</span>
-      <div class="filtro-botoes">
-        <button class="btn-filtro ativo" data-dif="Todas">Todas</button>
-        <button class="btn-filtro facil"   data-dif="Fácil">Fácil</button>
-        <button class="btn-filtro medio"   data-dif="Médio">Médio</button>
-        <button class="btn-filtro dificil" data-dif="Difícil">Difícil</button>
-      </div>
-    </div>
-
-    <div id="gridTemas" class="grid-temas"></div>
-    <button id="btnVoltarHome" class="btn-secundario">← Voltar</button>
-  </section>
-
-  <!-- CADASTRO -->
-  <section id="cadastro" style="display:none;">
-    <h2>Cadastrar Nova Palavra</h2>
-
-    <!-- Mensagem de feedback inline — sem alert() -->
-    <div id="msgCadastro" class="msg-cadastro" style="display:none;"></div>
-
-    <form id="formCadastro">
-      <label for="novaPalavra">Palavra:</label>
-      <input type="text" id="novaPalavra" required autocomplete="off" placeholder="Digite a palavra...">
-
-      <label for="novoTema">Tema:</label>
-      <input type="text" id="novoTema" required placeholder="Ex: Esportes, Cidades...">
-
-      <label for="novaDificuldade">Dificuldade:</label>
-      <select id="novaDificuldade" required>
-        <option value="Fácil">Fácil</option>
-        <option value="Médio" selected>Médio</option>
-        <option value="Difícil">Difícil</option>
-      </select>
-
-      <button type="submit" id="btnSubmitCad">Cadastrar</button>
-    </form>
-
-    <button id="btnVoltarHomeCad" class="btn-secundario" style="margin-top:16px;">← Voltar</button>
-  </section>
-
-  <!-- JOGO -->
-  <section id="jogo" style="display:none;">
-
-    <!-- Placar da sessão -->
-    <div class="placar-sessao">
-      <div class="placar-item vit">
-        <span id="placarVitorias">0</span>
-        <small>Vitórias</small>
-      </div>
-      <div class="placar-item der">
-        <span id="placarDerrotas">0</span>
-        <small>Derrotas</small>
-      </div>
-      <div class="placar-item seq">
-        <span id="placarSequencia">0</span>
-        <small>Sequência 🔥</small>
-      </div>
-    </div>
-
-    <h2 id="temaAtual">Tema: —</h2>
-
-    <figure>
-      <pre id="forca"></pre>
-    </figure>
-
-    <div id="palavra"></div>
-
-    <div id="teclado"></div>
-
-    <div id="mensagem" class="mensagem"></div>
-
-    <div id="tentativas">
-      Tentativas restantes: <span id="errosRestantes">6</span>
-    </div>
-
-    <!-- RF14 - Ações pós-jogo com botão de compartilhar -->
-    <div id="acoesFinais" style="display:none; text-align:center; margin-top:16px;">
-      <button id="btnReiniciar">Jogar Novamente</button>
-      <button id="btnCompartilhar" class="btn-compartilhar">📋 Compartilhar</button>
-    </div>
-
-  </section>
-
 </main>
 
-<script type="module" src="js/main.js"></script>
 </body>
 </html>

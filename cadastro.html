@@ -3,38 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastrar Palavra</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Cadastrar Palavra - Jogo da Forca</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
+<header class="topo">
   <h1>Jogo da Forca</h1>
+  <div class="botoes-topo">
+    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
+  </div>
 </header>
 
 <main>
-  <section>
+  <section id="cadastro">
     <h2>Cadastrar Nova Palavra</h2>
 
+    <div id="msgCadastro" class="msg-cadastro" style="display:none;"></div>
+
     <form id="formCadastro">
-      <label>Palavra:</label>
-      <input type="text" required>
+      <label for="novaPalavra">Palavra:</label>
+      <input type="text" id="novaPalavra" required autocomplete="off" placeholder="Digite a palavra...">
 
-      <label>Tema:</label>
-      <input type="text" required>
+      <label for="novoTema">Tema:</label>
+      <input type="text" id="novoTema" required placeholder="Ex: Esportes, Cidades...">
 
-      <label>Dificuldade:</label>
-      <select>
-        <option>Fácil</option>
-        <option>Médio</option>
-        <option>Difícil</option>
+      <label for="novaDificuldade">Dificuldade:</label>
+      <select id="novaDificuldade" required>
+        <option value="Facil">Facil</option>
+        <option value="Medio" selected>Medio</option>
+        <option value="Dificil">Dificil</option>
       </select>
 
-      <button type="submit">Cadastrar</button>
+      <button type="submit" id="btnSubmitCad">Cadastrar</button>
     </form>
 
+    <button class="btn-secundario" style="margin-top:16px;" onclick="location.href='index.html'">← Voltar</button>
   </section>
 </main>
 
+<script type="module" src="js/cadastro.js"></script>
 </body>
 </html>

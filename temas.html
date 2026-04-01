@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha o Tema - Jogo da Forca</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <h1>Jogo da Forca</h1>
+  <div class="botoes-topo">
+    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
+  </div>
+</header>
+
+<main>
+  <section id="temas">
+    <h2>Escolha o Tema</h2>
+
+    <div class="filtro-dificuldade">
+      <span class="filtro-label">Filtrar por dificuldade:</span>
+      <div class="filtro-botoes">
+        <button class="btn-filtro ativo" data-dif="Todas">Todas</button>
+        <button class="btn-filtro facil" data-dif="Facil">Facil</button>
+        <button class="btn-filtro medio" data-dif="Medio">Medio</button>
+        <button class="btn-filtro dificil" data-dif="Dificil">Dificil</button>
+      </div>
+    </div>
+
+    <div id="gridTemas" class="grid-temas"></div>
+    <button class="btn-secundario" onclick="location.href='index.html'">← Voltar</button>
+  </section>
+</main>
+
+<script type="module" src="js/temas.js"></script>
+</body>
+</html>

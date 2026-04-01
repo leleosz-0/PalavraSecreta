@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogando - Jogo da Forca</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <h1>Jogo da Forca</h1>
+  <div class="botoes-topo">
+    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
+  </div>
+</header>
+
+<main>
+  <section id="jogo">
+    <div class="placar-sessao">
+      <div class="placar-item vit">
+        <span id="placarVitorias">0</span>
+        <small>Vitorias</small>
+      </div>
+      <div class="placar-item der">
+        <span id="placarDerrotas">0</span>
+        <small>Derrotas</small>
+      </div>
+      <div class="placar-item seq">
+        <span id="placarSequencia">0</span>
+        <small>Sequencia</small>
+      </div>
+    </div>
+
+    <h2 id="temaAtual">Tema: —</h2>
+
+    <figure>
+      <pre id="forca"></pre>
+    </figure>
+
+    <div id="palavra"></div>
+
+    <div id="teclado"></div>
+
+    <div id="mensagem" class="mensagem"></div>
+
+    <div id="tentativas">
+      Tentativas restantes: <span id="errosRestantes">6</span>
+    </div>
+
+    <div id="acoesFinais" style="display:none; text-align:center; margin-top:16px;">
+      <button id="btnReiniciar">Jogar Novamente</button>
+      <button id="btnCompartilhar" class="btn-compartilhar">Compartilhar</button>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="js/jogo.js"></script>
+</body>
+</html>
