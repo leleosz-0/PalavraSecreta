@@ -1,0 +1,5 @@
+armazenar o numero de vitorias e derrotas no indexedDB.
+sempre que o jogo for inicializado, zeram-se as estatisticas
+ao recomeçar manter no mesmo tema
+levar a base de palavras para o indexedDB
+não pode obscenidades em nenhum tema
