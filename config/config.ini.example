@@ -1,0 +1,12 @@
+[database]
+driver   = mysql
+host     = 127.0.0.1
+port     = 3306
+dbname   = forca_jogo
+username = root
+password = COLOQUE_SUA_SENHA_AQUI
+charset  = utf8mb4
+
+[app]
+debug    = false
+timezone = America/Sao_Paulo
