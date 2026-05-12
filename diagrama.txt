@@ -1,0 +1,77 @@
+// =========================================
+//  Palavra Secreta — Modelo de Banco de Dados
+//  Sintaxe: DBML (dbdiagram.io)
+// =========================================
+
+Project PalavraSecreta {
+  database_type: 'MySQL'
+  Note: 'Sistema de jogo da forca com backend PHP'
+}
+
+// ─────────────────────────────────────────
+//  ENTIDADE: Tema
+// ─────────────────────────────────────────
+Table temas {
+  id      int           [pk, increment, note: 'Chave primária']
+  nome    varchar(80)   [not null, unique, note: 'Ex: Natureza, Tecnologia']
+  icone   varchar(10)   [note: 'Emoji representativo do tema']
+
+  Note: 'Temas disponíveis para categorizar as palavras'
+}
+
+// ─────────────────────────────────────────
+//  ENTIDADE: Dificuldade
+// ─────────────────────────────────────────
+Table dificuldades {
+  id    int          [pk, increment]
+  nome  varchar(20)  [not null, unique, note: 'Facil | Medio | Dificil']
+
+  Note: 'Níveis de dificuldade das palavras'
+}
+
+// ─────────────────────────────────────────
+//  ENTIDADE: Palavra  ← entidade principal
+// ─────────────────────────────────────────
+Table palavras {
+  id              int           [pk, increment, note: 'Chave primária']
+  palavra         varchar(100)  [not null, unique, note: 'Sempre em maiúsculo']
+  tema_id         int           [not null, ref: > temas.id]
+  dificuldade_id  int           [not null, ref: > dificuldades.id]
+  criado_em       timestamp     [default: `CURRENT_TIMESTAMP`]
+
+  Note: 'Palavras usadas no jogo da forca'
+}
+
+// ─────────────────────────────────────────
+//  ENTIDADE: Jogador
+// ─────────────────────────────────────────
+Table jogadores {
+  id         int           [pk, increment]
+  nome       varchar(100)  [not null]
+  email      varchar(150)  [unique, note: 'Opcional — para ranking futuro']
+  criado_em  timestamp     [default: `CURRENT_TIMESTAMP`]
+
+  Note: 'Jogadores registrados no sistema'
+}
+
+// ─────────────────────────────────────────
+//  ENTIDADE: Partida  ← tabela intermediária N:N
+// ─────────────────────────────────────────
+Table partidas {
+  id          int        [pk, increment]
+  jogador_id  int        [not null, ref: > jogadores.id]
+  palavra_id  int        [not null, ref: > palavras.id]
+  erros       tinyint    [not null, default: 0, note: 'Máximo 6 erros']
+  venceu      boolean    [not null, default: false]
+  jogado_em   timestamp  [default: `CURRENT_TIMESTAMP`]
+
+  Note: 'Histórico de partidas — relacionamento N:N entre Jogador e Palavra'
+}
+
+// ─────────────────────────────────────────
+//  RELACIONAMENTOS (resumo)
+//
+//  temas        1 ──< N  palavras    (um tema tem várias palavras)
+//  dificuldades 1 ──< N  palavras    (uma dificuldade tem várias palavras)
+//  jogadores    N ──< N  palavras    (via tabela partidas)
+// ─────────────────────────────────────────
