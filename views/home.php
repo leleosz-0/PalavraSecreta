@@ -21,7 +21,7 @@
   <h1>🎮 Palavra Secreta</h1>
   <p>Backend PHP integrado ao jogo da forca</p>
 
-  <a href="../jogo.html" class="btn btn-jogo">▶ Jogar Agora</a>
+  <a href="../view/pages/jogo.html" class="btn btn-jogo">▶ Jogar Agora</a>
   <a href="/palavras"    class="btn btn-admin">⚙ Gerenciar Palavras</a>
 </div>
 </body>

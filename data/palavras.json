@@ -2863,5 +2863,285 @@
     "palavra": "ossobuco",
     "tema": "Comidas",
     "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "cachorro",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "gato",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cavalo",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "vaca",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "boi",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "galinha",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "pato",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "porco",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ovelha",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cabra",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "leão",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tigre",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "elefante",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "girafa",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "zebra",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "macaco",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "gorila",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "urso",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "lobo",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "raposa",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "coelho",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "rato",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "hamster",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "cobra",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "jacaré",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tartaruga",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "peixe",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "tubarão",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "baleia",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "golfinho",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "polvo",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "caranguejo",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "borboleta",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "abelha",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "formiga",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "aranha",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "escorpião",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "papagaio",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "coruja",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "águia",
+    "tema": "Animais",
+    "dificuldade": "Fácil"
+  },
+  {
+    "palavra": "ornitorrinco",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "tamanduá",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "capivara",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "suricato",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "pangolim",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "axolote",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "iguana",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "alpaca",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "lhama",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "narval",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "manatim",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "texugo",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "doninha",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "javali",
+    "tema": "Animais",
+    "dificuldade": "Médio"
+  },
+  {
+    "palavra": "gnu",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
+  },
+  {
+    "palavra": "blobfish",
+    "tema": "Animais",
+    "dificuldade": "Difícil"
   }
 ]

@@ -82,7 +82,7 @@ Clone o repositório:
 
 git clone https://github.com/leleosz-0/PalavraSecreta.git
 
-Abra o arquivo `index.html` em um navegador moderno.
+Abra o arquivo `view/index.html` em um navegador moderno.
 
 Não há dependências externas.
 

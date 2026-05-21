@@ -37,7 +37,7 @@ use Forca\Repositories\PalavraRepository;
 use Forca\Services\PalavraService;
 use Forca\Controllers\PalavraController;
 
-require_once __DIR__ . '/middleware/middleware.php';
+require_once __DIR__ . '/app/middleware/middleware.php';
 
 // ─────────────────────────────────────────────
 //  Tratamento global de erros (Passo 6)

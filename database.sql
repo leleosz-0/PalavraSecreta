@@ -1,42 +1,66 @@
--- =========================================
---  Passo 6 — Script de criação do banco
---  Execute: mysql -u root -p < database.sql
--- =========================================
+-- ============================================================
+--  Palavra Secreta — DDL MySQL / MariaDB
+-- ============================================================
 
-CREATE DATABASE IF NOT EXISTS forca_jogo
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
+SET NAMES utf8mb4;
+SET foreign_key_checks = 0;
 
-USE forca_jogo;
+-- ------------------------------------------------------------
+CREATE TABLE `temas` (
+  `id`    INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nome`  VARCHAR(80)  NOT NULL UNIQUE,
+  `icone` VARCHAR(10)  NULL COMMENT 'Emoji representativo do tema'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Temas disponíveis para categorizar as palavras';
 
-CREATE TABLE IF NOT EXISTS palavras (
-    id          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    palavra     VARCHAR(100)  NOT NULL,
-    tema        VARCHAR(80)   NOT NULL,
-    dificuldade ENUM('Facil', 'Medio', 'Dificil') NOT NULL DEFAULT 'Medio',
-    criado_em   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+-- ------------------------------------------------------------
+CREATE TABLE `dificuldades` (
+  `id`   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(20) NOT NULL UNIQUE COMMENT 'Facil | Medio | Dificil'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Níveis de dificuldade das palavras';
 
-    -- Evita palavras duplicadas (case-insensitive via collation)
-    UNIQUE KEY uk_palavra (palavra),
+-- ------------------------------------------------------------
+CREATE TABLE `palavras` (
+  `id`             INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `palavra`        VARCHAR(100) NOT NULL UNIQUE COMMENT 'Sempre em maiúsculo',
+  `tema_id`        INT          NOT NULL,
+  `dificuldade_id` INT          NOT NULL,
+  `criado_em`      TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT `fk_palavras_tema`        FOREIGN KEY (`tema_id`)        REFERENCES `temas`        (`id`),
+  CONSTRAINT `fk_palavras_dificuldade` FOREIGN KEY (`dificuldade_id`) REFERENCES `dificuldades` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Palavras usadas no jogo da forca';
 
-    -- Índices para os filtros mais comuns
-    INDEX idx_tema        (tema),
-    INDEX idx_dificuldade (dificuldade)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- ------------------------------------------------------------
+CREATE TABLE `jogadores` (
+  `id`        INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nome`      VARCHAR(100) NOT NULL,
+  `email`     VARCHAR(150) NULL UNIQUE COMMENT 'Opcional — para ranking futuro',
+  `criado_em` TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Jogadores registrados no sistema';
 
--- ─────────────────────────────────────────
---  Seed: algumas palavras de exemplo
--- ─────────────────────────────────────────
-INSERT IGNORE INTO palavras (palavra, tema, dificuldade) VALUES
-  ('SOL',          'Natureza',    'Facil'),
-  ('FLORESTA',     'Natureza',    'Facil'),
-  ('CACHOEIRA',    'Natureza',    'Facil'),
-  ('COMPUTADOR',   'Tecnologia',  'Facil'),
-  ('ALGORITMO',    'Tecnologia',  'Medio'),
-  ('ENCAPSULAMENTO','Tecnologia', 'Dificil'),
-  ('BANANA',       'Frutas',      'Facil'),
-  ('MARACUJA',     'Frutas',      'Facil'),
-  ('PIZZA',        'Comidas',     'Facil'),
-  ('FEIJOADA',     'Comidas',     'Medio'),
-  ('MEDICO',       'Profissoes',  'Facil'),
-  ('NEUROCIRURGIAO','Profissoes', 'Dificil');
+-- ------------------------------------------------------------
+CREATE TABLE `partidas` (
+  `id`         INT       NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `jogador_id` INT       NOT NULL,
+  `palavra_id` INT       NOT NULL,
+  `erros`      TINYINT   NOT NULL DEFAULT 0 COMMENT 'Máximo 6 erros',
+  `venceu`     TINYINT(1) NOT NULL DEFAULT 0,
+  `jogado_em`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT `fk_partidas_jogador` FOREIGN KEY (`jogador_id`) REFERENCES `jogadores` (`id`),
+  CONSTRAINT `fk_partidas_palavra` FOREIGN KEY (`palavra_id`) REFERENCES `palavras`  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Histórico de partidas';
+
+-- ------------------------------------------------------------
+--  Dados iniciais
+-- ------------------------------------------------------------
+INSERT INTO `dificuldades` (`nome`) VALUES ('Facil'), ('Medio'), ('Dificil');
+
+INSERT INTO `temas` (`nome`, `icone`) VALUES
+  ('Natureza',    '🌲'),
+  ('Tecnologia',  '💻'),
+  ('Animais',     '🐾'),
+  ('Esportes',    '⚽'),
+  ('Comidas',     '🍕'),
+  ('Paises',      '🌎'),
+  ('Games',       '🎮');
+
+SET foreign_key_checks = 1;
