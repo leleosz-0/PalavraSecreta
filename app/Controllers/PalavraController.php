@@ -32,7 +32,7 @@ class PalavraController
             $palavras = $this->service->listar($tema, $dificuldade);
             $temas    = $this->service->listarTemas();
 
-            $this->renderView('palavras/index', [
+            $this->renderView('Palavras/index', [
                 'palavras'    => $palavras,
                 'temas'       => $temas,
                 'filtroTema'  => $tema,
@@ -40,7 +40,7 @@ class PalavraController
             ]);
 
         } catch (BusinessRuleException $e) {
-            $this->renderView('palavras/index', ['erro' => $e->getMessage(), 'palavras' => [], 'temas' => []]);
+            $this->renderView('Palavras/index', ['erro' => $e->getMessage(), 'palavras' => [], 'temas' => []]);
         }
     }
 
@@ -49,7 +49,7 @@ class PalavraController
     // ─────────────────────────────────────────────
     public function criar(): void
     {
-        $this->renderView('palavras/form', ['titulo' => 'Cadastrar Palavra']);
+        $this->renderView('Palavras/form', ['titulo' => 'Cadastrar Palavra']);
     }
 
     // ─────────────────────────────────────────────
@@ -70,7 +70,7 @@ class PalavraController
 
         } catch (BusinessRuleException $e) {
             // Erro de negócio: renderiza o form com a mensagem amigável
-            $this->renderView('palavras/form', [
+            $this->renderView('Palavras/form', [
                 'titulo' => 'Cadastrar Palavra',
                 'erro'   => $e->getMessage(),
                 'old'    => $_POST, // repopula o formulário
@@ -85,7 +85,7 @@ class PalavraController
     {
         try {
             $palavra = $this->service->buscarPorId($id);
-            $this->renderView('palavras/form', [
+            $this->renderView('Palavras/form', [
                 'titulo'  => 'Editar Palavra',
                 'palavra' => $palavra,
             ]);
@@ -109,7 +109,7 @@ class PalavraController
             $this->redirect('/palavras?sucesso=1');
 
         } catch (BusinessRuleException $e) {
-            $this->renderView('palavras/form', [
+            $this->renderView('Palavras/form', [
                 'titulo' => 'Editar Palavra',
                 'erro'   => $e->getMessage(),
                 'old'    => $_POST,
@@ -184,7 +184,7 @@ class PalavraController
     {
         // Extrai variáveis para uso na view
         extract($dados);
-        $viewPath = __DIR__ . '/../../views/' . $view . '.php';
+        $viewPath = __DIR__ . '/../Views/' . $view . '.php';
 
         if (!file_exists($viewPath)) {
             throw new \RuntimeException("View não encontrada: {$view}");

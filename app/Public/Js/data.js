@@ -6,7 +6,7 @@ export let palavrasBase = [];
 
 export async function carregarPalavrasBase() {
   try {
-    const response = await fetch(new URL('../../data/palavras.json', import.meta.url));
+    const response = await fetch(new URL('../../Data/palavras.json', import.meta.url));
     if (!response.ok) throw new Error(`Erro: ${response.status}`);
 
     const data = await response.json();

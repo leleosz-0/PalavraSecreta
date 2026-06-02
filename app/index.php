@@ -18,8 +18,8 @@ declare(strict_types=1);
 // ─────────────────────────────────────────────
 spl_autoload_register(function (string $class): void {
     // Converte namespace em caminho de arquivo
-    // Ex: Forca\Controllers\PalavraController → src/Controllers/PalavraController.php
-    $base = __DIR__ . '/src/';
+    // Ex: Forca\Controllers\PalavraController → Controllers/PalavraController.php
+    $base = __DIR__ . '/';
     $rel  = str_replace('Forca\\', '', $class);
     $rel  = str_replace('\\', DIRECTORY_SEPARATOR, $rel);
     $file = $base . $rel . '.php';
@@ -37,7 +37,7 @@ use Forca\Repositories\PalavraRepository;
 use Forca\Services\PalavraService;
 use Forca\Controllers\PalavraController;
 
-require_once __DIR__ . '/app/middleware/middleware.php';
+require_once __DIR__ . '/Middleware/middleware.php';
 
 // ─────────────────────────────────────────────
 //  Tratamento global de erros (Passo 6)
@@ -46,7 +46,7 @@ require_once __DIR__ . '/app/middleware/middleware.php';
 set_exception_handler(function (Throwable $e): void {
     error_log('[ERRO] ' . $e->getMessage() . ' em ' . $e->getFile() . ':' . $e->getLine());
     http_response_code(500);
-    include __DIR__ . '/views/erro.php';
+    include __DIR__ . '/Views/erro.php';
     exit;
 });
 
@@ -71,11 +71,17 @@ $uri = rtrim($uri, '/') ?: '/';
 // Extrai segmentos da URI
 $partes = explode('/', ltrim($uri, '/'));
 
+// Serve arquivos estáticos diretamente quando existirem no diretório app/
+$arquivoEstatistico = __DIR__ . $uri;
+if ($uri !== '/' && is_file($arquivoEstatistico)) {
+    return false;
+}
+
 match (true) {
 
     // Página inicial
     $uri === '/' || $uri === '/index.php'
-        => (include __DIR__ . '/views/home.php'),
+        => (include __DIR__ . '/Views/home.php'),
 
     // ── API (para o jogo JS consumir) ──────────────────────
     // GET /api/palavras/sortear
@@ -124,6 +130,6 @@ match (true) {
     // 404
     default => (function (): void {
         http_response_code(404);
-        include __DIR__ . '/views/404.php';
+        include __DIR__ . '/Views/404.php';
     })(),
 };

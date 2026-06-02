@@ -27,13 +27,16 @@ class PalavraRepository implements IPalavraRepository
 
     private function insert(Palavra $palavra): Palavra
     {
-        $sql = 'INSERT INTO palavras (palavra, tema, dificuldade) VALUES (:palavra, :tema, :dificuldade)';
+        $temaId = $this->getOrCreateTemaId($palavra->getTema());
+        $dificuldadeId = $this->getDificuldadeId($palavra->getDificuldade());
+
+        $sql = 'INSERT INTO palavras (palavra, tema_id, dificuldade_id) VALUES (:palavra, :tema_id, :dificuldade_id)';
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
-            ':palavra'     => $palavra->getPalavra(),
-            ':tema'        => $palavra->getTema(),
-            ':dificuldade' => $palavra->getDificuldade(),
+            ':palavra'        => $palavra->getPalavra(),
+            ':tema_id'        => $temaId,
+            ':dificuldade_id' => $dificuldadeId,
         ]);
 
         // Retorna a entidade com o ID gerado
@@ -42,14 +45,21 @@ class PalavraRepository implements IPalavraRepository
 
     private function update(Palavra $palavra): Palavra
     {
-        $sql = 'UPDATE palavras SET palavra = :palavra, tema = :tema, dificuldade = :dificuldade WHERE id = :id';
+        $temaId = $this->getOrCreateTemaId($palavra->getTema());
+        $dificuldadeId = $this->getDificuldadeId($palavra->getDificuldade());
+
+        $sql = 'UPDATE palavras
+                   SET palavra = :palavra,
+                       tema_id = :tema_id,
+                       dificuldade_id = :dificuldade_id
+                 WHERE id = :id';
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
-            ':palavra'     => $palavra->getPalavra(),
-            ':tema'        => $palavra->getTema(),
-            ':dificuldade' => $palavra->getDificuldade(),
-            ':id'          => $palavra->getId(),
+            ':palavra'        => $palavra->getPalavra(),
+            ':tema_id'        => $temaId,
+            ':dificuldade_id' => $dificuldadeId,
+            ':id'             => $palavra->getId(),
         ]);
 
         return $this->find($palavra->getId());
@@ -60,7 +70,7 @@ class PalavraRepository implements IPalavraRepository
     // ─────────────────────────────────────────────
     public function find(int $id): ?Palavra
     {
-        $stmt = $this->pdo->prepare('SELECT * FROM palavras WHERE id = :id');
+        $stmt = $this->pdo->prepare($this->baseSelect() . ' WHERE p.id = :id');
         $stmt->execute([':id' => $id]);
 
         $row = $stmt->fetch();
@@ -69,20 +79,20 @@ class PalavraRepository implements IPalavraRepository
 
     public function findAll(?string $tema = null, ?string $dificuldade = null): array
     {
-        $sql    = 'SELECT * FROM palavras WHERE 1=1';
+        $sql    = $this->baseSelect() . ' WHERE 1=1';
         $params = [];
 
         if ($tema !== null) {
-            $sql .= ' AND tema = :tema';
+            $sql .= ' AND t.nome = :tema';
             $params[':tema'] = $tema;
         }
 
         if ($dificuldade !== null) {
-            $sql .= ' AND dificuldade = :dificuldade';
+            $sql .= ' AND d.nome = :dificuldade';
             $params[':dificuldade'] = $dificuldade;
         }
 
-        $sql .= ' ORDER BY tema, palavra';
+        $sql .= ' ORDER BY t.nome, p.palavra';
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
@@ -92,20 +102,20 @@ class PalavraRepository implements IPalavraRepository
 
     public function findAleatorio(?string $tema = null, ?string $dificuldade = null): ?Palavra
     {
-        $sql    = 'SELECT * FROM palavras WHERE 1=1';
+        $sql    = $this->baseSelect() . ' WHERE 1=1';
         $params = [];
 
         if ($tema !== null) {
-            $sql .= ' AND tema = :tema';
+            $sql .= ' AND t.nome = :tema';
             $params[':tema'] = $tema;
         }
 
         if ($dificuldade !== null) {
-            $sql .= ' AND dificuldade = :dificuldade';
+            $sql .= ' AND d.nome = :dificuldade';
             $params[':dificuldade'] = $dificuldade;
         }
 
-        $sql .= ' ORDER BY RAND() LIMIT 1';
+        $sql .= ' ORDER BY RANDOM() LIMIT 1';
 
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
@@ -144,8 +154,49 @@ class PalavraRepository implements IPalavraRepository
 
     public function findTemas(): array
     {
-        $stmt = $this->pdo->query('SELECT DISTINCT tema FROM palavras ORDER BY tema');
+        $stmt = $this->pdo->query('SELECT nome FROM temas ORDER BY nome');
         return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+
+    private function baseSelect(): string
+    {
+        return 'SELECT p.id,
+                       p.palavra,
+                       t.nome AS tema,
+                       d.nome AS dificuldade,
+                       p.criado_em
+                  FROM palavras p
+                  JOIN temas t ON t.id = p.tema_id
+                  JOIN dificuldades d ON d.id = p.dificuldade_id';
+    }
+
+    private function getOrCreateTemaId(string $tema): int
+    {
+        $stmt = $this->pdo->prepare('SELECT id FROM temas WHERE nome = :nome');
+        $stmt->execute([':nome' => $tema]);
+        $id = $stmt->fetchColumn();
+
+        if ($id !== false) {
+            return (int) $id;
+        }
+
+        $stmt = $this->pdo->prepare('INSERT INTO temas (nome) VALUES (:nome)');
+        $stmt->execute([':nome' => $tema]);
+
+        return (int) $this->pdo->lastInsertId();
+    }
+
+    private function getDificuldadeId(string $dificuldade): int
+    {
+        $stmt = $this->pdo->prepare('SELECT id FROM dificuldades WHERE nome = :nome');
+        $stmt->execute([':nome' => $dificuldade]);
+        $id = $stmt->fetchColumn();
+
+        if ($id === false) {
+            throw new \RuntimeException("Dificuldade não cadastrada: {$dificuldade}");
+        }
+
+        return (int) $id;
     }
 
     /**

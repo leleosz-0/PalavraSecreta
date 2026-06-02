@@ -8,7 +8,7 @@ use RuntimeException;
 
 /**
  * Classe responsável exclusivamente por:
- * 1. Ler as configurações do config.ini
+ * 1. Abrir o banco SQLite da aplicação
  * 2. Retornar uma única instância PDO (padrão Singleton)
  *
  * Nenhum outro arquivo do sistema deve saber como conectar ao banco.
@@ -25,7 +25,7 @@ class Database
 
     /**
      * Retorna a única instância PDO da aplicação.
-     * Se ainda não existir, lê o config.ini e cria a conexão.
+     * Se ainda não existir, abre o SQLite e cria a conexão.
      */
     public static function getInstance(): PDO
     {
@@ -37,40 +37,21 @@ class Database
     }
 
     /**
-     * Lê o config.ini e instancia o PDO.
+     * Instancia o PDO apontando para o banco SQLite principal.
      * Lança RuntimeException em caso de falha — nunca exibe stack trace ao usuário.
      */
     private static function createConnection(): PDO
     {
-        $configPath = __DIR__ . '/../../config/config.ini';
-
-        if (!file_exists($configPath)) {
-            throw new RuntimeException('Arquivo de configuração não encontrado.');
-        }
-
-        $config = parse_ini_file($configPath, true);
-
-        if ($config === false || !isset($config['database'])) {
-            throw new RuntimeException('Configuração de banco de dados inválida.');
-        }
-
-        $db = $config['database'];
-
-        $dsn = sprintf(
-            '%s:host=%s;port=%s;dbname=%s;charset=%s',
-            $db['driver'],
-            $db['host'],
-            $db['port'],
-            $db['dbname'],
-            $db['charset']
-        );
+        $dbPath = __DIR__ . '/database.sqlite';
 
         try {
-            $pdo = new PDO($dsn, $db['username'], $db['password'], [
+            $pdo = new PDO('sqlite:' . $dbPath, null, null, [
                 PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_EMULATE_PREPARES   => false,
             ]);
+
+            $pdo->exec('PRAGMA foreign_keys = ON');
 
             return $pdo;
 
