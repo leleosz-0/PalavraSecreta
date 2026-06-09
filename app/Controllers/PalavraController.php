@@ -178,6 +178,82 @@ class PalavraController
     }
 
     // ─────────────────────────────────────────────
+    //  API: LISTAR TODAS (para carregar o pool inicial no JS)
+    //  GET /api/palavras/lista
+    // ─────────────────────────────────────────────
+    public function listarApi(): void
+    {
+        header('Content-Type: application/json; charset=utf-8');
+
+        try {
+            $palavras = $this->service->listar();
+            
+            // Converte objetos Palavra em arrays
+            $data = array_map(fn($p) => $p->toArray(), $palavras);
+
+            echo json_encode([
+                'ok'   => true,
+                'data' => $data,
+            ]);
+
+        } catch (BusinessRuleException $e) {
+            http_response_code(500);
+            echo json_encode(['ok' => false, 'erro' => $e->getMessage()]);
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    //  API: SALVAR NOVA PALAVRA (para o JS)
+    //  POST /api/palavras
+    // ─────────────────────────────────────────────
+    public function storeApi(): void
+    {
+        header('Content-Type: application/json; charset=utf-8');
+
+        try {
+            // Tenta ler do body JSON primeiro, senão do $_POST
+            $json  = file_get_contents('php://input');
+            $dados = json_decode($json, true) ?? $_POST;
+
+            $palavra     = $dados['palavra']     ?? '';
+            $tema        = $dados['tema']        ?? '';
+            $dificuldade = $dados['dificuldade'] ?? '';
+
+            $nova = $this->service->cadastrar($palavra, $tema, $dificuldade);
+
+            echo json_encode([
+                'ok'   => true,
+                'data' => $nova->toArray(),
+            ]);
+
+        } catch (BusinessRuleException $e) {
+            http_response_code(400);
+            echo json_encode(['ok' => false, 'erro' => $e->getMessage()]);
+        } catch (\Throwable $e) {
+            http_response_code(500);
+            echo json_encode(['ok' => false, 'erro' => 'Erro interno ao salvar.']);
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    //  VIEWS DO JOGO
+    // ─────────────────────────────────────────────
+    public function viewJogo(): void
+    {
+        $this->renderView('Public/jogo');
+    }
+
+    public function viewTemas(): void
+    {
+        $this->renderView('Public/temas');
+    }
+
+    public function viewCadastro(): void
+    {
+        $this->renderView('Public/cadastro');
+    }
+
+    // ─────────────────────────────────────────────
     //  HELPERS PRIVADOS
     // ─────────────────────────────────────────────
     private function renderView(string $view, array $dados = []): void

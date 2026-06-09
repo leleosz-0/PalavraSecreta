@@ -1,6 +1,4 @@
-// cadastro.js - Logica da tela de cadastro
-
-import { salvarPalavra } from './storage.js';
+// cadastro.js - Logica da tela de cadastro integrada ao Backend
 
 const form = document.getElementById("formCadastro");
 const msgEl = document.getElementById("msgCadastro");
@@ -16,7 +14,7 @@ function exibirMensagem(texto, tipo) {
   }, 4000);
 }
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const palavra = document.getElementById("novaPalavra").value.trim();
@@ -28,12 +26,23 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  const resultado = salvarPalavra(palavra, tema, dificuldade);
+  try {
+    const response = await fetch('/api/palavras', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ palavra, tema, dificuldade })
+    });
 
-  if (resultado.ok) {
-    exibirMensagem(`Palavra "${palavra.toUpperCase()}" cadastrada com sucesso!`, "sucesso");
-    form.reset();
-  } else {
-    exibirMensagem(resultado.motivo, "erro");
+    const resultado = await response.json();
+
+    if (resultado.ok) {
+      exibirMensagem(`Palavra "${palavra.toUpperCase()}" cadastrada com sucesso!`, "sucesso");
+      form.reset();
+    } else {
+      exibirMensagem(resultado.erro || "Erro ao cadastrar.", "erro");
+    }
+  } catch (err) {
+    console.error("Erro ao enviar para API:", err);
+    exibirMensagem("Erro de conexão com o servidor.", "erro");
   }
 });

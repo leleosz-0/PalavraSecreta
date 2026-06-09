@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escolha do Tema</title>
-  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="/Public/Css/style.css">
 </head>
 <body>
 
 <header class="topo">
   <h1>Palavra Secreta</h1>
   <div class="botoes-topo">
-    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
-    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
+    <button id="btnIniciar" onclick="location.href='/temas'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='/cadastro'">Cadastrar Palavra</button>
   </div>
 </header>
 
@@ -31,10 +31,10 @@
     </div>
 
     <div id="gridTemas" class="grid-temas"></div>
-    <button class="btn-secundario" onclick="location.href='../index.html'">← Voltar</button>
+    <button class="btn-secundario" onclick="location.href='/'">← Voltar</button>
   </section>
 </main>
 
-<script type="module" src="../Js/temas.js"></script>
+<script type="module" src="/Public/Js/temas.js"></script>
 </body>
 </html>

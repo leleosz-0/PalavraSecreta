@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastrar Palavra</title>
-  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="/Public/Css/style.css">
 </head>
 <body>
 
 <header class="topo">
   <h1>Palavra Secreta</h1>
   <div class="botoes-topo">
-    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
-    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
+    <button id="btnIniciar" onclick="location.href='/temas'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='/cadastro'">Cadastrar Palavra</button>
   </div>
 </header>
 
@@ -39,10 +39,10 @@
       <button type="submit" id="btnSubmitCad">Cadastrar</button>
     </form>
 
-    <button class="btn-secundario" style="margin-top:16px;" onclick="location.href='../index.html'">← Voltar</button>
+    <button class="btn-secundario" style="margin-top:16px;" onclick="location.href='/'">← Voltar</button>
   </section>
 </main>
 
-<script type="module" src="../Js/cadastro.js"></script>
+<script type="module" src="/Public/Js/cadastro.js"></script>
 </body>
 </html>

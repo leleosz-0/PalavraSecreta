@@ -78,13 +78,29 @@ acessibilidade e a manutenção do projeto.
 
 ## Como Executar
 
+O projeto agora possui um **Backend em PHP** com SQLite para persistência de dados.
+
+### Pré-requisitos
+- PHP 8.1 ou superior
+- Extensão `pdo_sqlite` habilitada
+
+### Iniciando o servidor
 Clone o repositório:
-
+```bash
 git clone https://github.com/leleosz-0/PalavraSecreta.git
+cd PalavraSecreta
+```
 
-Abra o arquivo `app/Public/index.html` em um navegador moderno.
+Inicie o servidor embutido do PHP apontando para o arquivo principal:
+```bash
+php -S localhost:8000 app/index.php
+```
 
-Não há dependências externas.
+Acesse no navegador:
+`http://localhost:8000`
+
+### Importante
+Não abra os arquivos HTML diretamente no navegador (`file://`), pois as funcionalidades de cadastro e sorteio dependem da API PHP.
 
 ------------------------------------------------------------------------
 

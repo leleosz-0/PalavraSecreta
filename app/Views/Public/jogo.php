@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Palavra Secreta</title>
-  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="/Public/Css/style.css">
 </head>
 <body>
 
 <header class="topo">
   <h1>Palavra Secreta</h1>
   <div class="botoes-topo">
-    <button id="btnIniciar" onclick="location.href='temas.html'">Novo Jogo</button>
-    <button id="btnCadastrar" onclick="location.href='cadastro.html'">Cadastrar Palavra</button>
+    <button id="btnIniciar" onclick="location.href='/temas'">Novo Jogo</button>
+    <button id="btnCadastrar" onclick="location.href='/cadastro'">Cadastrar Palavra</button>
   </div>
 </header>
+...
+<script type="module" src="/Public/Js/jogo.js"></script>
 
-<main>
   <section id="jogo">
     <div class="placar-sessao">
       <div class="placar-item vit">

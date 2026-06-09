@@ -71,9 +71,12 @@ $uri = rtrim($uri, '/') ?: '/';
 // Extrai segmentos da URI
 $partes = explode('/', ltrim($uri, '/'));
 
-// Serve arquivos estáticos diretamente quando existirem no diretório app/
-$arquivoEstatistico = __DIR__ . $uri;
-if ($uri !== '/' && is_file($arquivoEstatistico)) {
+// Serve arquivos estáticos (CSS, JS, Imagens) diretamente
+$arquivoEstatico = __DIR__ . $uri;
+$extensao = pathinfo($arquivoEstatico, PATHINFO_EXTENSION);
+$extensoesPermitidas = ['css', 'js', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'ico'];
+
+if (is_file($arquivoEstatico) && in_array($extensao, $extensoesPermitidas)) {
     return false;
 }
 
@@ -83,14 +86,33 @@ match (true) {
     $uri === '/' || $uri === '/index.php'
         => (include __DIR__ . '/Views/home.php'),
 
+    // ── Páginas do Jogo (Agora via Controller) ─────────────
+    $uri === '/jogo'
+        => $controller->viewJogo(),
+
+    $uri === '/temas'
+        => $controller->viewTemas(),
+
+    $uri === '/cadastro'
+        => $controller->viewCadastro(),
+
+
     // ── API (para o jogo JS consumir) ──────────────────────
     // GET /api/palavras/sortear
     $method === 'GET' && $uri === '/api/palavras/sortear'
         => $controller->sortear(),
 
+    // GET /api/palavras/lista
+    $method === 'GET' && $uri === '/api/palavras/lista'
+        => $controller->listarApi(),
+
     // GET /api/temas
     $method === 'GET' && $uri === '/api/temas'
         => $controller->temas(),
+
+    // POST /api/palavras (para o frontend JS cadastrar)
+    $method === 'POST' && $uri === '/api/palavras'
+        => $controller->storeApi(),
 
     // ── CRUD Web ────────────────────────────────────────────
     // GET /palavras
@@ -125,7 +147,10 @@ match (true) {
 
     // POST /palavras/{id}/deletar
     $method === 'POST' && isset($partes[1]) && isset($partes[2]) && $partes[2] === 'deletar'
-        => $controller->destroy((int) $partes[1]),
+        => (function () use ($controller, $partes): void {
+            verificarTokenCsrf();
+            $controller->destroy((int) $partes[1]);
+        })(),
 
     // 404
     default => (function (): void {

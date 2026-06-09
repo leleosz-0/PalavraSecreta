@@ -1,39 +1,45 @@
-// data.js - Carregamento de palavras
-
-import { getPalavrasCadastradas } from './storage.js';
+// data.js - Carregamento de palavras via API PHP
 
 export let palavrasBase = [];
 
+/**
+ * Busca palavras do backend PHP.
+ * Agora integrado com a camada de Controller e Service.
+ */
 export async function carregarPalavrasBase() {
   try {
-    const response = await fetch(new URL('../../Data/palavras.json', import.meta.url));
-    if (!response.ok) throw new Error(`Erro: ${response.status}`);
+    // Busca todas as palavras cadastradas no banco SQLite via API
+    const response = await fetch('/api/palavras/lista'); 
+    
+    if (!response.ok) {
+      throw new Error(`Erro na API: ${response.status}`);
+    }
 
-    const data = await response.json();
-    palavrasBase = data.map(item => ({
-      ...item,
-      palavra: item.palavra.toUpperCase()
-    }));
-    return palavrasBase;
+    const json = await response.json();
+    return json.data || [];
   } catch (err) {
-    console.error("Falha ao carregar palavras.json:", err);
-    palavrasBase = [
-      { palavra: "SOL", tema: "Natureza", dificuldade: "Facil" },
-      { palavra: "ARVORE", tema: "Natureza", dificuldade: "Facil" },
-      { palavra: "CELULAR", tema: "Tecnologia", dificuldade: "Facil" }
-    ];
-    return palavrasBase;
+    console.error("Falha crítica ao carregar palavras da API:", err);
+    // Retorna vazio para sinalizar erro no carregamento
+    return [];
   }
 }
 
 export async function carregarTodasPalavras() {
-  await carregarPalavrasBase();
-  const cadastradas = getPalavrasCadastradas();
+  const palavras = await carregarPalavrasBase();
+  
+  if (palavras.length === 0) {
+    console.warn("Nenhuma palavra encontrada no banco de dados.");
+  }
 
-  const todas = [...palavrasBase, ...cadastradas];
-  const unicas = todas.filter((item, index, self) =>
-    index === self.findIndex(t => t.palavra === item.palavra)
+  // Normaliza e remove duplicatas
+  const unicas = palavras.filter((item, index, self) =>
+    index === self.findIndex(t => t.palavra.toUpperCase() === item.palavra.toUpperCase())
   );
 
-  return unicas;
+  palavrasBase = unicas.map(item => ({
+    ...item,
+    palavra: item.palavra.toUpperCase()
+  }));
+
+  return palavrasBase;
 }

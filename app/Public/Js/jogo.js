@@ -282,7 +282,7 @@ function mostrarAcoesFinais(venceu) {
   acoes.style.display = "flex";
 
   document.getElementById("btnReiniciar").onclick = () => {
-    location.href = 'temas.html';
+    location.href = '/temas';
   };
 
   const btnComp = document.getElementById("btnCompartilhar");

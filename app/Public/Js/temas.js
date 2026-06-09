@@ -126,7 +126,7 @@ function iniciarJogoComTema(temaEscolhido, pool) {
   });
 
   // Redireciona para o jogo
-  location.href = 'jogo.html';
+  location.href = '/jogo';
 }
 
 function configurarFiltros() {

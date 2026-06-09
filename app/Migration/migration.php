@@ -91,6 +91,8 @@ class Migration
 
             $this->pdo->commit();
 
+            $this->seedPalavras();
+
             echo "Migration executada com sucesso.\n";
         } catch (PDOException $e) {
             if ($this->pdo->inTransaction()) {
@@ -100,6 +102,62 @@ class Migration
             echo 'Erro na migration: ' . $e->getMessage() . "\n";
             exit(1);
         }
+    }
+
+    private function seedPalavras(): void
+    {
+        $jsonPath = __DIR__ . '/../Data/palavras.json';
+        if (!file_exists($jsonPath)) {
+            echo "Aviso: palavras.json não encontrado para seeding.\n";
+            return;
+        }
+
+        $palavras = json_decode(file_get_contents($jsonPath), true);
+        if (!$palavras) {
+            echo "Aviso: Falha ao decodificar palavras.json.\n";
+            return;
+        }
+
+        echo "Semeando " . count($palavras) . " palavras... (isso pode levar alguns segundos)\n";
+
+        // Mapeia nomes para IDs para evitar consultas repetitivas
+        $temasMap = [];
+        foreach ($this->pdo->query('SELECT id, nome FROM temas')->fetchAll() as $t) {
+            $temasMap[$t['nome']] = $t['id'];
+        }
+
+        $difsMap = [];
+        foreach ($this->pdo->query('SELECT id, nome FROM dificuldades')->fetchAll() as $d) {
+            $difsMap[$d['nome']] = $d['id'];
+        }
+
+        $this->pdo->beginTransaction();
+        
+        $stmt = $this->pdo->prepare('INSERT OR IGNORE INTO palavras (palavra, tema_id, dificuldade_id) VALUES (?, ?, ?)');
+
+        foreach ($palavras as $p) {
+            $temaId = $temasMap[$p['tema']] ?? null;
+            // Se o tema não existe no seeder inicial, cria um novo
+            if (!$temaId) {
+                $insTema = $this->pdo->prepare('INSERT INTO temas (nome) VALUES (?)');
+                $insTema->execute([$p['tema']]);
+                $temaId = (int) $this->pdo->lastInsertId();
+                $temasMap[$p['tema']] = $temaId;
+            }
+
+            // Normaliza dificuldade (json pode ter acento, banco não)
+            $difNome = str_replace(['á', 'é', 'í'], ['a', 'e', 'i'], $p['dificuldade']);
+            $difId = $difsMap[$difNome] ?? $difsMap['Medio'];
+
+            $stmt->execute([
+                strtoupper($p['palavra']),
+                $temaId,
+                $difId
+            ]);
+        }
+
+        $this->pdo->commit();
+        echo "Words seeded com sucesso.\n";
     }
 }
 
