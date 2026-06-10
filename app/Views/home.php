@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Palavra Secreta — PHP Backend</title>
+  <title>Palavra Secreta</title>
   <style>
     body { font-family: Arial, sans-serif; background: #121212; color: #fff;
            display:flex; align-items:center; justify-content:center; min-height:100vh; }
@@ -19,7 +19,7 @@
 <body>
 <div class="card">
   <h1>🎮 Palavra Secreta</h1>
-  <p>Backend PHP integrado ao jogo da forca</p>
+  <p>Joguinho da forca muito kawaii :D</p>
 
   <a href="/temas" class="btn btn-jogo">▶ Jogar Agora</a>
   <a href="/palavras"    class="btn btn-admin">⚙ Gerenciar Palavras</a>
